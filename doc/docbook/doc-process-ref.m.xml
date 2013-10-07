@@ -1,0 +1,50 @@
+<reference
+    xmlns:m="http://ghub.sourceforge.net/ns/model"
+    xmlns:mpro="http://ghub.sourceforge.net/ns/model-profile"
+    mpro:spem="http://www.omg.org/spec/SPEM/20070801/SPEM%202.0%20UML%202%20Profile.xmi"
+    >
+
+<!--
+
+Note that this document describes part of a way to loosely couple a DocBook XML documemt to the SPEM metamodel's UML profile, as in developing an approach for a combined document-driven and model-driven design and engineering practice.
+
+TO DO: 
+
+* Continue expanding on this document -  both in its content and its integration with SPEM - with regards to the design of a documentstion process and toolchain incorporating DocBook XML and optionally, integrating with project-management web services (cf. Jenkins CI)
+
+* Develop XSL stylesheets for producting a SPEM model of items denoted in the individual refentry sections of thism document (indefinite timeframe) and for integrating that model with the generated DocBook documentation
+
+--->
+
+<refentry xml:id="ref.libreOfficeWriter" m:refType="spem:ToolDefinition">
+  <refnamediv>
+    <refname>LibreOffice Writer</refname>
+    <refpurpose>Word Processor (desktop) (FOSS)</refpurpose>
+    <reftype>Tool Definition</reftype>
+    <m:attribute name="spem:managedWorkProduct" xref="ref.documentation"/>
+    <!-- can export to DocBook -->
+  </refnamediv>
+</refentry>
+
+<refentry xml:id="ref.documentation" m:refType="spem:WorkProductDefinition">
+  <refnamediv>
+    <refname>Documentation</refname>
+    <refpurpose>An asset describing the nature and usage of a resource</refpurpose>
+    <reftype>Work Product Definition</reftype>
+  </refnamediv>
+</refentry>
+
+<refentry xml:id="ref.writeTechDocs" m:refType="spem:TaskDefinition">
+  <refnamediv>
+    <refname>Write Technical Documentation</refname>
+    <refpurpose>Documentation Task</refpurpose>
+    <reftype>Task Definition</reftype>
+    <m:attribute name="spem:usedTool" xref="ref.libreOfficeWriter"/>
+    <m:attribute name="spem:usedTool" xref="ref.emacs"/>
+    <m:attribute name="spem:usedTool" xref="ref.uxwrite"/>
+    <m:attribute name="spem:usedTool" xref="ref.textastic"/>
+    <m:attribute name="spem:requiredQualification" xref="ref.techDocAuthor"/>
+  </refnamediv>
+</refentry>
+
+</reference>
