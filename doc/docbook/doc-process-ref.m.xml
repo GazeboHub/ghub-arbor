@@ -12,34 +12,34 @@
     xml:id="ref.docProcess"
     xmlns:m="http://ghub.sourceforge.net/ns/model"
     xmlns:mpro="http://ghub.sourceforge.net/ns/model-profile"
-    mpro:spem="http://www.omg.org/spec/SPEM/20070801/SPEM%202.0%20UML%202%20Profile.xmi"
+    mpro:s="http://www.omg.org/spec/S/20070801/S%202.0%20UML%202%20Profile.xmi"
     >
   <info>
     <title>&p; Documentation Process Reference</title>
   </info>
 <!--
 
-Note that this document describes part of a way to loosely couple a DocBook XML documemt to the SPEM metamodel's UML profile, as in developing an approach for a combined document-driven and model-driven design and engineering practice.
+Note that this document describes part of a way to loosely couple a DocBook XML documemt to the S metamodel's UML profile, as in developing an approach for a combined document-driven and model-driven design and engineering practice.
 
 TO DO:
 
-* Continue expanding on this document -  both in its content and its integration with SPEM - with regards to the design of a documentstion process and toolchain incorporating DocBook XML and optionally, integrating with project-management web services (cf. Jenkins CI)
+* Continue expanding on this document -  both in its content and its integration with S - with regards to the design of a documentstion process and toolchain incorporating DocBook XML and optionally, integrating with project-management web services (cf. Jenkins CI)
 
-* Develop XSL stylesheets for producting a SPEM model of items denoted in the individual refentry sections of thism document (indefinite timeframe) and for integrating that model with the generated DocBook documentation
+* Develop XSL stylesheets for producting a S model of items denoted in the individual refentry sections of thism document (indefinite timeframe) and for integrating that model with the generated DocBook documentation
 
 -->
 
-<refentry xml:id="r.libreOfficeWriter" m:refclass="spem:ToolDefinition">
+<refentry xml:id="r.libreOfficeWriter" m:refclass="s:ToolDefinition">
   <refnamediv>
     <refname>LibreOffice Writer</refname>
     <refpurpose>Word Processor (desktop) (FOSS)</refpurpose>
     <refclass>Tool Definition</refclass>
-    <m:attribute name="spem:managedWorkProduct" xref="r.documentation"/>
+    <m:attribute name="s:managedWorkProduct" xref="r.documentation"/>
     <!-- can export to DocBook -->
   </refnamediv>
 </refentry>
 
-<refentry xml:id="r.documentation" m:refclass="spem:WorkProductDefinition">
+<refentry xml:id="r.documentation" m:refclass="s:WorkProductDefinition">
   <refnamediv>
     <refname>Documentation</refname>
     <refpurpose>An asset describing the nature and usage of a resource</refpurpose>
@@ -47,16 +47,16 @@ TO DO:
   </refnamediv>
 </refentry>
 
-<refentry xml:id="r.writeTechDocs" m:refclass="spem:TaskDefinition">
+<refentry xml:id="r.writeTechDocs" m:refclass="s:TaskDefinition">
   <refnamediv>
     <refname>Write Technical Documentation</refname>
     <refpurpose>Documentation Task</refpurpose>
     <refclass>Task Definition</refclass>
-    <m:attribute name="spem:usedTool" xref="r.libreOfficeWriter"/>
-    <m:attribute name="spem:usedTool" xref="r.emacs"/>
-    <m:attribute name="spem:usedTool" xref="r.uxwrite"/>
-    <m:attribute name="spem:usedTool" xref="r.textastic"/>
-    <m:attribute name="spem:requiredQualification" xref="r.techDocAuthor"/>
+    <m:attribute name="s:usedTool" xref="r.libreOfficeWriter"/>
+    <m:attribute name="s:usedTool" xref="r.emacs"/>
+    <m:attribute name="s:usedTool" xref="r.uxwrite"/>
+    <m:attribute name="s:usedTool" xref="r.textastic"/>
+    <m:attribute name="s:requiredQualification" xref="r.techDocAuthor"/>
   </refnamediv>
 </refentry>
 
