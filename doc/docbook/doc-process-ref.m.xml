@@ -29,29 +29,29 @@ TO DO:
 
 -->
 
-<refentry xml:id="r.libreOfficeWriter" m:refType="spem:ToolDefinition">
+<refentry xml:id="r.libreOfficeWriter" m:refclass="spem:ToolDefinition">
   <refnamediv>
     <refname>LibreOffice Writer</refname>
     <refpurpose>Word Processor (desktop) (FOSS)</refpurpose>
-    <reftype>Tool Definition</reftype>
+    <refclass>Tool Definition</refclass>
     <m:attribute name="spem:managedWorkProduct" xref="r.documentation"/>
     <!-- can export to DocBook -->
   </refnamediv>
 </refentry>
 
-<refentry xml:id="r.documentation" m:refType="spem:WorkProductDefinition">
+<refentry xml:id="r.documentation" m:refclass="spem:WorkProductDefinition">
   <refnamediv>
     <refname>Documentation</refname>
     <refpurpose>An asset describing the nature and usage of a resource</refpurpose>
-    <reftype>Work Product Definition</reftype>
+    <refclass>Work Product Definition</refclass>
   </refnamediv>
 </refentry>
 
-<refentry xml:id="r.writeTechDocs" m:refType="spem:TaskDefinition">
+<refentry xml:id="r.writeTechDocs" m:refclass="spem:TaskDefinition">
   <refnamediv>
     <refname>Write Technical Documentation</refname>
     <refpurpose>Documentation Task</refpurpose>
-    <reftype>Task Definition</reftype>
+    <refclass>Task Definition</refclass>
     <m:attribute name="spem:usedTool" xref="r.libreOfficeWriter"/>
     <m:attribute name="spem:usedTool" xref="r.emacs"/>
     <m:attribute name="spem:usedTool" xref="r.uxwrite"/>
