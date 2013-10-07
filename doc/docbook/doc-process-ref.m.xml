@@ -1,3 +1,9 @@
+<!DOCTYPE reference [
+
+<!ENTITY % project.ent SYSTEM "project.ent">
+%project.ent;
+
+]>
 <reference
     xmlns="http://docbook.org/ns/docbook"
     version="ghub-docbook-1.0"
@@ -8,7 +14,9 @@
     xmlns:mpro="http://ghub.sourceforge.net/ns/model-profile"
     mpro:spem="http://www.omg.org/spec/SPEM/20070801/SPEM%202.0%20UML%202%20Profile.xmi"
     >
-
+  <info>
+    <title>&p; Documentation Process Reference</title>
+  </info>
 <!--
 
 Note that this document describes part of a way to loosely couple a DocBook XML documemt to the SPEM metamodel's UML profile, as in developing an approach for a combined document-driven and model-driven design and engineering practice.
@@ -19,7 +27,7 @@ TO DO:
 
 * Develop XSL stylesheets for producting a SPEM model of items denoted in the individual refentry sections of thism document (indefinite timeframe) and for integrating that model with the generated DocBook documentation
 
---->
+-->
 
 <refentry xml:id="r.libreOfficeWriter" m:refType="spem:ToolDefinition">
   <refnamediv>
