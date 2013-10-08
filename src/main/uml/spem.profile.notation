@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_nvl48C_BEeOM36joGrlgrw" type="PapyrusUMLProfileDiagram" name="spem" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="__AynMC_EEeOM36joGrlgrw" type="2007" fontName="Sans" fontHeight="10" lineColor="0">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AzOQC_EEeOM36joGrlgrw" source="ShadowFigure">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AzOQS_EEeOM36joGrlgrw" key="ShadowFigure_Value" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AzOQi_EEeOM36joGrlgrw" source="displayNameLabelIcon">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AzOQy_EEeOM36joGrlgrw" key="displayNameLabelIcon_value" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__AzORC_EEeOM36joGrlgrw" source="QualifiedName">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__AzORS_EEeOM36joGrlgrw" key="QualifiedNameDepth" value="1000"/>
+    </eAnnotations>
+    <children xmi:type="notation:DecorationNode" xmi:id="__Az1UC_EEeOM36joGrlgrw" type="5026"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="__Az1US_EEeOM36joGrlgrw" type="1005">
+      <children xmi:type="notation:Shape" xmi:id="_92pIQC_EEeOM36joGrlgrw" type="1026" fontName="Sans" fontHeight="10" lineColor="0">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_92pvUC_EEeOM36joGrlgrw" source="ShadowFigure">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_92pvUS_EEeOM36joGrlgrw" key="ShadowFigure_Value" value="false"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_92pvUi_EEeOM36joGrlgrw" source="displayNameLabelIcon">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_92pvUy_EEeOM36joGrlgrw" key="displayNameLabelIcon_value" value="false"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_92pvVC_EEeOM36joGrlgrw" source="QualifiedName">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_92pvVS_EEeOM36joGrlgrw" key="QualifiedNameDepth" value="1000"/>
+        </eAnnotations>
+        <children xmi:type="notation:DecorationNode" xmi:id="_92pvVi_EEeOM36joGrlgrw" type="1034"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_92rkgC_EEeOM36joGrlgrw" type="1071">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_92rkgS_EEeOM36joGrlgrw"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_92rkgi_EEeOM36joGrlgrw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_92rkgy_EEeOM36joGrlgrw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_92rkhC_EEeOM36joGrlgrw"/>
+        </children>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_92rkhS_EEeOM36joGrlgrw" visible="false" type="1019">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_92rkhi_EEeOM36joGrlgrw"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_92rkhy_EEeOM36joGrlgrw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_92rkiC_EEeOM36joGrlgrw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_92rkiS_EEeOM36joGrlgrw"/>
+        </children>
+        <element xmi:type="uml:Stereotype" href="spem.profile.uml#_92WNUC_EEeOM36joGrlgrw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_92pIQS_EEeOM36joGrlgrw" x="41" y="32"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="__Az1Ui_EEeOM36joGrlgrw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__Az1Uy_EEeOM36joGrlgrw"/>
+    </children>
+    <element xmi:type="uml:Package" href="spem.profile.uml#__Aco8C_EEeOM36joGrlgrw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__AynMS_EEeOM36joGrlgrw" x="74" y="37" width="911" height="456"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_nvl48S_BEeOM36joGrlgrw"/>
+  <element xmi:type="uml:Profile" href="spem.profile.uml#_nuVUsC_BEeOM36joGrlgrw"/>
+</notation:Diagram>

@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://schema.omg.org/spec/UML/2.1.1" xmi:id="_0" name="SPEM 2.0 UML 2 Profile" metamodelReference="_packageImport.1">
+	<packageImport xmi:type="uml:PackageImport" xmi:id="_packageImport.1" visibility="private" importingNamespace="_0">
+		<importedPackage xmi:type="uml:Model" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#_0"/>
+	</packageImport>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ExtensibleElement" name="ExtensibleElement" isAbstract="true">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ExtensibleElement-kind" name="kind">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+			<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="ExtensibleElement-kind-_upperValue" value="1"/>
+			<lowerValue xmi:type="uml:LiteralInteger" xmi:id="ExtensibleElement-kind-_lowerValue"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ExtensibleElement-base_Classifier" name="base_Classifier" association="Classifier_ExtensibleElement">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Classifier"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ExtensibleElement-base_Class" name="base_Class" association="Class_ExtensibleElement">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="WorkDefinition" name="WorkDefinition" isAbstract="true">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkDefinition-postcondition" name="postcondition">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkDefinition-precondition" name="precondition">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkDefinition-base_Action" name="base_Action" association="Action_WorkDefinition">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Action"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkDefinition-base_Classifier" name="base_Classifier" association="Classifier_WorkDefinition">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Classifier"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="MethodContentElement" name="MethodContentElement" isAbstract="true">
+		<generalization xmi:type="uml:Generalization" xmi:id="MethodContentElement-_generalization.0" general="DescribableElement" specific="MethodContentElement"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ProcessElement" name="ProcessElement" isAbstract="true">
+		<generalization xmi:type="uml:Generalization" xmi:id="ProcessElement-_generalization.0" general="DescribableElement" specific="ProcessElement"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="DescribableElement" name="DescribableElement" isAbstract="true">
+		<generalization xmi:type="uml:Generalization" xmi:id="DescribableElement-_generalization.0" general="ExtensibleElement" specific="DescribableElement"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="DescribableElement-presentationName" name="presentationName">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="DescribableElement-briefDescription" name="briefDescription">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="DescribableElement-purpose" name="purpose">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="DescribableElement-mainDescription" name="mainDescription">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="TaskDefinition" name="TaskDefinition">
+		<generalization xmi:type="uml:Generalization" xmi:id="TaskDefinition-_generalization.0" general="WorkDefinition" specific="TaskDefinition"/>
+		<generalization xmi:type="uml:Generalization" xmi:id="TaskDefinition-_generalization.1" general="MethodContentElement" specific="TaskDefinition"/>
+		<icon xmi:type="uml:Image" xmi:id="TaskDefinition-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="TaskDefinition-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="WorkProductDefinition" name="WorkProductDefinition">
+		<generalization xmi:type="uml:Generalization" xmi:id="WorkProductDefinition-_generalization.0" general="MethodContentElement" specific="WorkProductDefinition"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkProductDefinition-base_Class" name="base_Class" association="Class_WorkProductDefinition">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="WorkProductDefinition-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="WorkProductDefinition-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="RoleDefinition" name="RoleDefinition">
+		<generalization xmi:type="uml:Generalization" xmi:id="RoleDefinition-_generalization.0" general="MethodContentElement" specific="RoleDefinition"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="RoleDefinition-base_Class" name="base_Class" association="Class_RoleDefinition">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="RoleDefinition-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="RoleDefinition-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ParameterIn" name="ParameterIn">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ParameterIn-base_Association" name="base_Association" association="Association_ParameterIn">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Performer" name="Performer">
+		<generalization xmi:type="uml:Generalization" xmi:id="Performer-_generalization.0" general="ExtensibleElement" specific="Performer"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="Performer-base_Association" name="base_Association" association="Association_PerformerMap">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Activity" name="Activity">
+		<generalization xmi:type="uml:Generalization" xmi:id="Activity-_generalization.0" general="PlannedElement" specific="Activity"/>
+		<generalization xmi:type="uml:Generalization" xmi:id="Activity-_generalization.1" general="WorkDefinition" specific="Activity"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="Activity-useKind" name="useKind" type="ActivityUseKind">
+			<defaultValue xmi:type="uml:InstanceValue" xmi:id="Activity-useKind-_defaultValue" type="ActivityUseKind" instance="ActivityUseKind-na"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="Activity-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="Activity-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Enumeration" xmi:id="ActivityUseKind" name="ActivityUseKind">
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="ActivityUseKind-na" name="na" enumeration="ActivityUseKind"/>
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="ActivityUseKind-extension" name="extension" enumeration="ActivityUseKind"/>
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="ActivityUseKind-localContribution" name="localContribution" enumeration="ActivityUseKind"/>
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="ActivityUseKind-localReplacement" name="localReplacement" enumeration="ActivityUseKind"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="NestedBreakdownElement" name="NestedBreakdownElement">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="NestedBreakdownElement-base_Association" name="base_Association" association="Association_NestedBreakdownElement">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ParameterOut" name="ParameterOut">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ParameterOut-base_Association" name="base_Association" association="Association_ParameterOut">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ParamterInOut" name="ParamterInOut">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ParamterInOut-base_Association" name="base_Association" association="Association_ParamterInOut">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="UsedActivityExtension" name="UsedActivityExtension">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="UsedActivityExtension-base_Generalization" name="base_Generalization" association="Generalization_UsedActivityExtension">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Generalization"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="UsedActivityLocalContribution" name="UsedActivityLocalContribution">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="UsedActivityLocalContribution-base_Dependency" name="base_Dependency" association="Dependency_UsedActivityLocalContribution">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="UsedActivityLocalReplacement" name="UsedActivityLocalReplacement">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="UsedActivityLocalReplacement-base_Dependency" name="base_Dependency" association="Dependency_UsedActivityLocalReplacement">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="BreakdownElement" name="BreakdownElement" isAbstract="true">
+		<generalization xmi:type="uml:Generalization" xmi:id="BreakdownElement-_generalization.0" general="ProcessElement" specific="BreakdownElement"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="BreakdownElement-hasMultipleOccurrences" name="hasMultipleOccurrences">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			<defaultValue xmi:type="uml:LiteralBoolean" xmi:id="BreakdownElement-hasMultipleOccurrences-_defaultValue">
+				<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			</defaultValue>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="BreakdownElement-isOptional" name="isOptional">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			<defaultValue xmi:type="uml:LiteralBoolean" xmi:id="BreakdownElement-isOptional-_defaultValue">
+				<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			</defaultValue>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="BreakdownElement-isPlanned" name="isPlanned">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			<defaultValue xmi:type="uml:LiteralBoolean" xmi:id="BreakdownElement-isPlanned-_defaultValue" value="true">
+				<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			</defaultValue>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="WorkBreakdownElement" name="WorkBreakdownElement" isAbstract="true">
+		<generalization xmi:type="uml:Generalization" xmi:id="WorkBreakdownElement-_generalization.0" general="BreakdownElement" specific="WorkBreakdownElement"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkBreakdownElement-isRepeatable" name="isRepeatable">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			<defaultValue xmi:type="uml:LiteralBoolean" xmi:id="WorkBreakdownElement-isRepeatable-_defaultValue">
+				<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			</defaultValue>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkBreakdownElement-isOngoing" name="isOngoing">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			<defaultValue xmi:type="uml:LiteralBoolean" xmi:id="WorkBreakdownElement-isOngoing-_defaultValue">
+				<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			</defaultValue>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkBreakdownElement-isEventDriven" name="isEventDriven">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			<defaultValue xmi:type="uml:LiteralBoolean" xmi:id="WorkBreakdownElement-isEventDriven-_defaultValue">
+				<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			</defaultValue>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Milestone" name="Milestone">
+		<generalization xmi:type="uml:Generalization" xmi:id="Milestone-_generalization.0" general="WorkBreakdownElement" specific="Milestone"/>
+		<icon xmi:type="uml:Image" xmi:id="Milestone-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="Milestone-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="RequiredResults" name="RequiredResults">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="RequiredResults-base_Association" name="base_Association" association="Association_RequiredResults">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ResponsibilityAssignment" name="ResponsibilityAssignment">
+		<generalization xmi:type="uml:Generalization" xmi:id="ResponsibilityAssignment-_generalization.0" general="ExtensibleElement" specific="ResponsibilityAssignment"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ResponsibilityAssignment-base_Association" name="base_Association" association="Association_ResponsibilityAssignmentMap">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="RoleUse" name="RoleUse">
+		<generalization xmi:type="uml:Generalization" xmi:id="RoleUse-_generalization.0" general="BreakdownElement" specific="RoleUse"/>
+		<icon xmi:type="uml:Image" xmi:id="RoleUse-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="RoleUse-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="WorkProductUse" name="WorkProductUse">
+		<generalization xmi:type="uml:Generalization" xmi:id="WorkProductUse-_generalization.0" general="BreakdownElement" specific="WorkProductUse"/>
+		<icon xmi:type="uml:Image" xmi:id="WorkProductUse-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="WorkProductUse-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="WorkProductRelationship" name="WorkProductRelationship">
+		<generalization xmi:type="uml:Generalization" xmi:id="WorkProductRelationship-_generalization.0" general="ExtensibleElement" specific="WorkProductRelationship"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkProductRelationship-base_Association" name="base_Association" association="Association_WorkProductRelationship">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="WorkSequence" name="WorkSequence">
+		<generalization xmi:type="uml:Generalization" xmi:id="WorkSequence-_generalization.0" general="BreakdownElement" specific="WorkSequence"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkSequence-linkKind" name="linkKind" type="WorkSequenceKind">
+			<defaultValue xmi:type="uml:InstanceValue" xmi:id="WorkSequence-linkKind-_defaultValue" type="WorkSequenceKind" instance="WorkSequenceKind-finishToStart"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkSequence-base_Dependency" name="base_Dependency" association="Dependency_WorkSequence">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="WorkSequence-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="WorkSequence-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Enumeration" xmi:id="WorkSequenceKind" name="WorkSequenceKind">
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="WorkSequenceKind-finishToStart" name="finishToStart" enumeration="WorkSequenceKind"/>
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="WorkSequenceKind-finishToFinish" name="finishToFinish" enumeration="WorkSequenceKind"/>
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="WorkSequenceKind-startToStart" name="startToStart" enumeration="WorkSequenceKind"/>
+		<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="WorkSequenceKind-startToFinish" name="startToFinish" enumeration="WorkSequenceKind"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Category" name="Category">
+		<generalization xmi:type="uml:Generalization" xmi:id="Category-_generalization.0" general="DescribableElement" specific="Category"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="Category-base_Class" name="base_Class" association="Class_Category">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="Category-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="Category-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Guidance" name="Guidance">
+		<generalization xmi:type="uml:Generalization" xmi:id="Guidance-_generalization.0" general="DescribableElement" specific="Guidance"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="Guidance-base_Class" name="base_Class" association="Class_Guidance">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="Guidance-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="Guidance-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Metric" name="Metric">
+		<generalization xmi:type="uml:Generalization" xmi:id="Metric-_generalization.0" general="Guidance" specific="Metric"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="Metric-constraint" name="constraint">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="Metric-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="Metric-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="OptionalityMandatory" name="OptionalityMandatory">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="OptionalityMandatory-base_Association" name="base_Association" association="Association_OptionalityMandatory">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="OptionalityOptional" name="OptionalityOptional">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="OptionalityOptional-base_Association" name="base_Association" association="Association_OptionalityOptional">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Qualification" name="Qualification">
+		<generalization xmi:type="uml:Generalization" xmi:id="Qualification-_generalization.0" general="MethodContentElement" specific="Qualification"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="Qualification-base_Class" name="base_Class" association="Class_Qualification">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Step" name="Step">
+		<generalization xmi:type="uml:Generalization" xmi:id="Step-_generalization.0" general="WorkDefinition" specific="Step"/>
+		<generalization xmi:type="uml:Generalization" xmi:id="Step-_generalization.1" general="MethodContentElement" specific="Step"/>
+		<icon xmi:type="uml:Image" xmi:id="Step-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="Step-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ToolDefinition" name="ToolDefinition">
+		<generalization xmi:type="uml:Generalization" xmi:id="ToolDefinition-_generalization.0" general="MethodContentElement" specific="ToolDefinition"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ToolDefinition-base_Class" name="base_Class" association="Class_ToolDefinition">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="ToolDefinition-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="ToolDefinition-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="CompositeRole" name="CompositeRole">
+		<generalization xmi:type="uml:Generalization" xmi:id="CompositeRole-_generalization.0" general="RoleUse" specific="CompositeRole"/>
+		<icon xmi:type="uml:Image" xmi:id="CompositeRole-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="CompositeRole-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="AggregatedRoles" name="AggregatedRoles">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="AggregatedRoles-base_Association" name="base_Association" association="Association_AggregatedRoles">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Association"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="MethodContentPackage" name="MethodContentPackage">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="MethodContentPackage-base_Package" name="base_Package" association="Package_MethodContentPackage">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Package"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="MethodContentPackage-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="MethodContentPackage-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="PlannedElement" name="PlannedElement" isAbstract="true"/>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="TaskUse" name="TaskUse">
+		<generalization xmi:type="uml:Generalization" xmi:id="TaskUse-_generalization.0" general="PlannedElement" specific="TaskUse"/>
+		<generalization xmi:type="uml:Generalization" xmi:id="TaskUse-_generalization.1" general="WorkBreakdownElement" specific="TaskUse"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="TaskUse-base_Action" name="base_Action" association="Action_TaskUse">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Action"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="TaskUse-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="TaskUse-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="MethodContentTrace" name="MethodContentTrace">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="MethodContentTrace-base_Dependency" name="base_Dependency" association="Dependency_MethodContentTrace">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ProcessPackage" name="ProcessPackage">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ProcessPackage-base_Package" name="base_Package" association="Package_ProcessPackage">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Package"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="ProcessPackage-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="ProcessPackage-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="MethodConfiguration" name="MethodConfiguration">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="MethodConfiguration-base_Class" name="base_Class" association="Class_MethodConfiguration">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="PackageSelection" name="PackageSelection">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="PackageSelection-base_Dependency" name="base_Dependency" association="Dependency_PackageSelection">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="BaseConfiguration" name="BaseConfiguration">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="BaseConfiguration-base_Dependency" name="base_Dependency" association="Dependency_BaseConfiguration">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="MethodLibrary" name="MethodLibrary">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="MethodLibrary-base_Package" name="base_Package" association="Package_MethodLibrary">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Package"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="MethodLibrary-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="MethodLibrary-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="BasePlugin" name="BasePlugin">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="BasePlugin-base_Dependency" name="base_Dependency" association="Dependency_BasePlugin">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="VariabilitySpecialization" name="VariabilitySpecialization">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="VariabilitySpecialization-base_Generalization" name="base_Generalization" association="Generalization_VariabilitySpecialization">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Generalization"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Generalization_VariabilitySpecialization" name="Generalization_VariabilitySpecialization" memberEnd="Generalization_VariabilitySpecialization-extension_VariabilitySpecialization VariabilitySpecialization-base_Generalization">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Generalization_VariabilitySpecialization-extension_VariabilitySpecialization" name="extension_VariabilitySpecialization" type="VariabilitySpecialization" aggregation="composite" owningAssociation="Generalization_VariabilitySpecialization" association="Generalization_VariabilitySpecialization">
+			<lowerValue xmi:type="uml:LiteralInteger" xmi:id="Generalization_VariabilitySpecialization-extension_VariabilitySpecialization-_lowerValue"/>
+		</ownedEnd>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="VariabilityContributes" name="VariabilityContributes">
+		<generalization xmi:type="uml:Generalization" xmi:id="VariabilityContributes-_generalization.0" general="VariabilitySpecialization" specific="VariabilityContributes"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="VariabilityReplaces" name="VariabilityReplaces">
+		<generalization xmi:type="uml:Generalization" xmi:id="VariabilityReplaces-_generalization.0" general="VariabilitySpecialization" specific="VariabilityReplaces"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="VariabilityExtends" name="VariabilityExtends">
+		<generalization xmi:type="uml:Generalization" xmi:id="VariabilityExtends-_generalization.0" general="VariabilitySpecialization" specific="VariabilityExtends"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="VariabilityExendsReplaces" name="VariabilityExendsReplaces">
+		<generalization xmi:type="uml:Generalization" xmi:id="VariabilityExendsReplaces-_generalization.0" general="VariabilitySpecialization" specific="VariabilityExendsReplaces"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="WorkProductPort" name="WorkProductPort">
+		<generalization xmi:type="uml:Generalization" xmi:id="WorkProductPort-_generalization.0" general="ProcessElement" specific="WorkProductPort"/>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkProductPort-portKind" name="portKind">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#String"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkProductPort-isOptional" name="isOptional">
+			<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			<defaultValue xmi:type="uml:LiteralBoolean" xmi:id="WorkProductPort-isOptional-_defaultValue">
+				<type xmi:type="uml:PrimitiveType" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Boolean"/>
+			</defaultValue>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="WorkProductPort-base_Port" name="base_Port" association="Port_WorkProductPort">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Port"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Action_WorkDefinition" name="Action_WorkDefinition" memberEnd="Action_WorkDefinition-extension_WorkDefinition WorkDefinition-base_Action">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Action_WorkDefinition-extension_WorkDefinition" name="extension_WorkDefinition" type="WorkDefinition" aggregation="composite" owningAssociation="Action_WorkDefinition" association="Action_WorkDefinition">
+			<lowerValue xmi:type="uml:LiteralInteger" xmi:id="Action_WorkDefinition-extension_WorkDefinition-_lowerValue"/>
+		</ownedEnd>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Action_TaskUse" name="Action_TaskUse" memberEnd="Action_TaskUse-extension_TaskUse TaskUse-base_Action">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Action_TaskUse-extension_TaskUse" name="extension_TaskUse" type="TaskUse" aggregation="composite" owningAssociation="Action_TaskUse" association="Action_TaskUse">
+			<lowerValue xmi:type="uml:LiteralInteger" xmi:id="Action_TaskUse-extension_TaskUse-_lowerValue"/>
+		</ownedEnd>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="MethodPlugin" name="MethodPlugin">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="MethodPlugin-base_Package" name="base_Package" association="Package_MethodPlugin">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Package"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="MethodPlugin-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="MethodPlugin-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ProcessComponent" name="ProcessComponent">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ProcessComponent-base_Class" name="base_Class" association="Class_ProcessComponent">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Class"/>
+		</ownedAttribute>
+		<ownedAttribute xmi:type="uml:Property" xmi:id="ProcessComponent-base_Package" name="base_Package" association="Package_ProcessComponent">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Package"/>
+		</ownedAttribute>
+		<icon xmi:type="uml:Image" xmi:id="ProcessComponent-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="ProcessComponent-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="ProcessComponentUse" name="ProcessComponentUse">
+		<generalization xmi:type="uml:Generalization" xmi:id="ProcessComponentUse-_generalization.0" general="BreakdownElement" specific="ProcessComponentUse"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="TeamProfile" name="TeamProfile">
+		<generalization xmi:type="uml:Generalization" xmi:id="TeamProfile-_generalization.0" general="BreakdownElement" specific="TeamProfile"/>
+		<icon xmi:type="uml:Image" xmi:id="TeamProfile-_icon.0"/>
+		<icon xmi:type="uml:Image" xmi:id="TeamProfile-_icon.1"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Generalization_UsedActivityExtension" name="Generalization_UsedActivityExtension" memberEnd="Generalization_UsedActivityExtension-extension_UsedActivityExtension UsedActivityExtension-base_Generalization">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Generalization_UsedActivityExtension-extension_UsedActivityExtension" name="extension_UsedActivityExtension" type="UsedActivityExtension" aggregation="composite" owningAssociation="Generalization_UsedActivityExtension" association="Generalization_UsedActivityExtension">
+			<lowerValue xmi:type="uml:LiteralInteger" xmi:id="Generalization_UsedActivityExtension-extension_UsedActivityExtension-_lowerValue"/>
+		</ownedEnd>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="Suppressed" name="Suppressed">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="Suppressed-base_Dependency" name="base_Dependency" association="Dependency_Suppressed">
+			<type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.1.1/uml.xml#Dependency"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Port_WorkProductPort" name="Port_WorkProductPort" memberEnd="Port_WorkProductPort-extension_WorkProductPort WorkProductPort-base_Port">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Port_WorkProductPort-extension_WorkProductPort" name="extension_WorkProductPort" type="WorkProductPort" aggregation="composite" owningAssociation="Port_WorkProductPort" association="Port_WorkProductPort"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_AggregatedRoles" name="Association_AggregatedRoles" memberEnd="Association_AggregatedRoles-extension_AggregatedRoles AggregatedRoles-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_AggregatedRoles-extension_AggregatedRoles" name="extension_AggregatedRoles" type="AggregatedRoles" aggregation="composite" owningAssociation="Association_AggregatedRoles" association="Association_AggregatedRoles"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_BaseConfiguration" name="Dependency_BaseConfiguration" memberEnd="Dependency_BaseConfiguration-extension_BaseConfiguration BaseConfiguration-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_BaseConfiguration-extension_BaseConfiguration" name="extension_BaseConfiguration" type="BaseConfiguration" aggregation="composite" owningAssociation="Dependency_BaseConfiguration" association="Dependency_BaseConfiguration"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_BasePlugin" name="Dependency_BasePlugin" memberEnd="Dependency_BasePlugin-extension_BasePlugin BasePlugin-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_BasePlugin-extension_BasePlugin" name="extension_BasePlugin" type="BasePlugin" aggregation="composite" owningAssociation="Dependency_BasePlugin" association="Dependency_BasePlugin"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_Category" name="Class_Category" memberEnd="Class_Category-extension_Category Category-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_Category-extension_Category" name="extension_Category" type="Category" aggregation="composite" owningAssociation="Class_Category" association="Class_Category"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Classifier_ExtensibleElement" name="Classifier_ExtensibleElement" memberEnd="Classifier_ExtensibleElement-extension_ExtensibleElement ExtensibleElement-base_Classifier">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Classifier_ExtensibleElement-extension_ExtensibleElement" name="extension_ExtensibleElement" type="ExtensibleElement" aggregation="composite" owningAssociation="Classifier_ExtensibleElement" association="Classifier_ExtensibleElement"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_Guidance" name="Class_Guidance" memberEnd="Class_Guidance-extension_Guidance Guidance-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_Guidance-extension_Guidance" name="extension_Guidance" type="Guidance" aggregation="composite" owningAssociation="Class_Guidance" association="Class_Guidance"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_MethodConfiguration" name="Class_MethodConfiguration" memberEnd="Class_MethodConfiguration-extension_MethodConfiguration MethodConfiguration-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_MethodConfiguration-extension_MethodConfiguration" name="extension_MethodConfiguration" type="MethodConfiguration" aggregation="composite" owningAssociation="Class_MethodConfiguration" association="Class_MethodConfiguration"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Package_MethodContentPackage" name="Package_MethodContentPackage" memberEnd="Package_MethodContentPackage-extension_MethodContentPackage MethodContentPackage-base_Package">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Package_MethodContentPackage-extension_MethodContentPackage" name="extension_MethodContentPackage" type="MethodContentPackage" aggregation="composite" owningAssociation="Package_MethodContentPackage" association="Package_MethodContentPackage"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_MethodContentTrace" name="Dependency_MethodContentTrace" memberEnd="Dependency_MethodContentTrace-extension_MethodContentTrace MethodContentTrace-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_MethodContentTrace-extension_MethodContentTrace" name="extension_MethodContentTrace" type="MethodContentTrace" aggregation="composite" owningAssociation="Dependency_MethodContentTrace" association="Dependency_MethodContentTrace"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Package_MethodLibrary" name="Package_MethodLibrary" memberEnd="Package_MethodLibrary-extension_MethodLibrary MethodLibrary-base_Package">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Package_MethodLibrary-extension_MethodLibrary" name="extension_MethodLibrary" type="MethodLibrary" aggregation="composite" owningAssociation="Package_MethodLibrary" association="Package_MethodLibrary"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Package_MethodPlugin" name="Package_MethodPlugin" memberEnd="Package_MethodPlugin-extension_MethodPlugin MethodPlugin-base_Package">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Package_MethodPlugin-extension_MethodPlugin" name="extension_MethodPlugin" type="MethodPlugin" aggregation="composite" owningAssociation="Package_MethodPlugin" association="Package_MethodPlugin"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_NestedBreakdownElement" name="Association_NestedBreakdownElement" memberEnd="Association_NestedBreakdownElement-extension_NestedBreakdownElement NestedBreakdownElement-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_NestedBreakdownElement-extension_NestedBreakdownElement" name="extension_NestedBreakdownElement" type="NestedBreakdownElement" aggregation="composite" owningAssociation="Association_NestedBreakdownElement" association="Association_NestedBreakdownElement"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_OptionalityMandatory" name="Association_OptionalityMandatory" memberEnd="Association_OptionalityMandatory-extension_OptionalityMandatory OptionalityMandatory-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_OptionalityMandatory-extension_OptionalityMandatory" name="extension_OptionalityMandatory" type="OptionalityMandatory" aggregation="composite" owningAssociation="Association_OptionalityMandatory" association="Association_OptionalityMandatory"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_OptionalityOptional" name="Association_OptionalityOptional" memberEnd="Association_OptionalityOptional-extension_OptionalityOptional OptionalityOptional-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_OptionalityOptional-extension_OptionalityOptional" name="extension_OptionalityOptional" type="OptionalityOptional" aggregation="composite" owningAssociation="Association_OptionalityOptional" association="Association_OptionalityOptional"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_PackageSelection" name="Dependency_PackageSelection" memberEnd="Dependency_PackageSelection-extension_PackageSelection PackageSelection-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_PackageSelection-extension_PackageSelection" name="extension_PackageSelection" type="PackageSelection" aggregation="composite" owningAssociation="Dependency_PackageSelection" association="Dependency_PackageSelection"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_ParameterIn" name="Association_ParameterIn" memberEnd="Association_ParameterIn-extension_ParameterIn ParameterIn-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_ParameterIn-extension_ParameterIn" name="extension_ParameterIn" type="ParameterIn" aggregation="composite" owningAssociation="Association_ParameterIn" association="Association_ParameterIn"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_ParameterOut" name="Association_ParameterOut" memberEnd="Association_ParameterOut-extension_ParameterOut ParameterOut-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_ParameterOut-extension_ParameterOut" name="extension_ParameterOut" type="ParameterOut" aggregation="composite" owningAssociation="Association_ParameterOut" association="Association_ParameterOut"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_ParamterInOut" name="Association_ParamterInOut" memberEnd="Association_ParamterInOut-extension_ParamterInOut ParamterInOut-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_ParamterInOut-extension_ParamterInOut" name="extension_ParamterInOut" type="ParamterInOut" aggregation="composite" owningAssociation="Association_ParamterInOut" association="Association_ParamterInOut"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_PerformerMap" name="Association_PerformerMap" memberEnd="Association_PerformerMap-extension_PerformerMap Performer-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_PerformerMap-extension_PerformerMap" name="extension_PerformerMap" type="Performer" aggregation="composite" owningAssociation="Association_PerformerMap" association="Association_PerformerMap"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_ProcessComponent" name="Class_ProcessComponent" memberEnd="Class_ProcessComponent-extension_ProcessComponent ProcessComponent-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_ProcessComponent-extension_ProcessComponent" name="extension_ProcessComponent" type="ProcessComponent" aggregation="composite" owningAssociation="Class_ProcessComponent" association="Class_ProcessComponent"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Package_ProcessComponent" name="Package_ProcessComponent" memberEnd="Package_ProcessComponent-extension_ProcessComponent ProcessComponent-base_Package">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Package_ProcessComponent-extension_ProcessComponent" name="extension_ProcessComponent" type="ProcessComponent" aggregation="composite" owningAssociation="Package_ProcessComponent" association="Package_ProcessComponent"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Package_ProcessPackage" name="Package_ProcessPackage" memberEnd="Package_ProcessPackage-extension_ProcessPackage ProcessPackage-base_Package">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Package_ProcessPackage-extension_ProcessPackage" name="extension_ProcessPackage" type="ProcessPackage" aggregation="composite" owningAssociation="Package_ProcessPackage" association="Package_ProcessPackage"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_Qualification" name="Class_Qualification" memberEnd="Class_Qualification-extension_Qualification Qualification-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_Qualification-extension_Qualification" name="extension_Qualification" type="Qualification" aggregation="composite" owningAssociation="Class_Qualification" association="Class_Qualification"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_RequiredResults" name="Association_RequiredResults" memberEnd="Association_RequiredResults-extension_RequiredResults RequiredResults-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_RequiredResults-extension_RequiredResults" name="extension_RequiredResults" type="RequiredResults" aggregation="composite" owningAssociation="Association_RequiredResults" association="Association_RequiredResults"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_ResponsibilityAssignmentMap" name="Association_ResponsibilityAssignmentMap" memberEnd="Association_ResponsibilityAssignmentMap-extension_ResponsibilityAssignmentMap ResponsibilityAssignment-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_ResponsibilityAssignmentMap-extension_ResponsibilityAssignmentMap" name="extension_ResponsibilityAssignmentMap" type="ResponsibilityAssignment" aggregation="composite" owningAssociation="Association_ResponsibilityAssignmentMap" association="Association_ResponsibilityAssignmentMap"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_RoleDefinition" name="Class_RoleDefinition" memberEnd="Class_RoleDefinition-extension_RoleDefinition RoleDefinition-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_RoleDefinition-extension_RoleDefinition" name="extension_RoleDefinition" type="RoleDefinition" aggregation="composite" owningAssociation="Class_RoleDefinition" association="Class_RoleDefinition"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_Suppressed" name="Dependency_Suppressed" memberEnd="Dependency_Suppressed-extension_Suppressed Suppressed-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_Suppressed-extension_Suppressed" name="extension_Suppressed" type="Suppressed" aggregation="composite" owningAssociation="Dependency_Suppressed" association="Dependency_Suppressed"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_ToolDefinition" name="Class_ToolDefinition" memberEnd="Class_ToolDefinition-extension_ToolDefinition ToolDefinition-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_ToolDefinition-extension_ToolDefinition" name="extension_ToolDefinition" type="ToolDefinition" aggregation="composite" owningAssociation="Class_ToolDefinition" association="Class_ToolDefinition"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_UsedActivityLocalContribution" name="Dependency_UsedActivityLocalContribution" memberEnd="Dependency_UsedActivityLocalContribution-extension_UsedActivityLocalContribution UsedActivityLocalContribution-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_UsedActivityLocalContribution-extension_UsedActivityLocalContribution" name="extension_UsedActivityLocalContribution" type="UsedActivityLocalContribution" aggregation="composite" owningAssociation="Dependency_UsedActivityLocalContribution" association="Dependency_UsedActivityLocalContribution"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_UsedActivityLocalReplacement" name="Dependency_UsedActivityLocalReplacement" memberEnd="Dependency_UsedActivityLocalReplacement-extension_UsedActivityLocalReplacement UsedActivityLocalReplacement-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_UsedActivityLocalReplacement-extension_UsedActivityLocalReplacement" name="extension_UsedActivityLocalReplacement" type="UsedActivityLocalReplacement" aggregation="composite" owningAssociation="Dependency_UsedActivityLocalReplacement" association="Dependency_UsedActivityLocalReplacement"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Classifier_WorkDefinition" name="Classifier_WorkDefinition" memberEnd="Classifier_WorkDefinition-extension_WorkDefinition WorkDefinition-base_Classifier">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Classifier_WorkDefinition-extension_WorkDefinition" name="extension_WorkDefinition" type="WorkDefinition" aggregation="composite" owningAssociation="Classifier_WorkDefinition" association="Classifier_WorkDefinition"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_WorkProductDefinition" name="Class_WorkProductDefinition" memberEnd="Class_WorkProductDefinition-extension_WorkProductDefinition WorkProductDefinition-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_WorkProductDefinition-extension_WorkProductDefinition" name="extension_WorkProductDefinition" type="WorkProductDefinition" aggregation="composite" owningAssociation="Class_WorkProductDefinition" association="Class_WorkProductDefinition"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Association_WorkProductRelationship" name="Association_WorkProductRelationship" memberEnd="Association_WorkProductRelationship-extension_WorkProductRelationship WorkProductRelationship-base_Association">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Association_WorkProductRelationship-extension_WorkProductRelationship" name="extension_WorkProductRelationship" type="WorkProductRelationship" aggregation="composite" owningAssociation="Association_WorkProductRelationship" association="Association_WorkProductRelationship"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_WorkSequence" name="Dependency_WorkSequence" memberEnd="Dependency_WorkSequence-extension_WorkSequence WorkSequence-base_Dependency">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Dependency_WorkSequence-extension_WorkSequence" name="extension_WorkSequence" type="WorkSequence" aggregation="composite" owningAssociation="Dependency_WorkSequence" association="Dependency_WorkSequence"/>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_ExtensibleElement" name="Class_ExtensibleElement" memberEnd="Class_ExtensibleElement-extension_ExtensibleElement ExtensibleElement-base_Class">
+		<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="Class_ExtensibleElement-extension_ExtensibleElement" name="extension_ExtensibleElement" type="ExtensibleElement" aggregation="composite" owningAssociation="Class_ExtensibleElement" association="Class_ExtensibleElement"/>
+	</packagedElement>
+</uml:Profile>
