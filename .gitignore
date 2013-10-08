@@ -1,6 +1,9 @@
+*~
+## Eclipse
+.settings/
+## Java
 *.class
-
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.ear
