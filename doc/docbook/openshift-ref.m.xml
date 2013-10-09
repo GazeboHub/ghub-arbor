@@ -150,6 +150,27 @@ https://www.openshift.com/
 	rhc setup</programlisting>
 
       </refsect2>
+      <refsect2>
+	<title>Results: Initial <command>rhc setup</command> on
+	<productname>OpenShift Online</productname></title>
+	<itemizedlist>
+	  <listitem>
+	    <para>SSH Key Pair (Optional) &mdash;
+	    <filename>$HOME/.ssh/id_rsa</filename> (private key) and
+	    <filename>$HOME/.ssh/id_rsa.pub</filename> (public key),
+	    with public key optionally uploaded to &ps.openshift;
+	    server via <productname>SSH</productname>
+	    (cf. <command>rhc sshkey</command>)</para>
+	  </listitem>
+	  <listitem>
+	    <para>Application Namespace (optional, but required for
+	    creating an &ps.openshift; application) (cf. <command>rhc
+	    create-domain</command>) (must be unique across all
+	    &ps.openshift; users) (will be part of each application's
+	    domain name under &ps.openshift;)</para>
+	  </listitem>
+	</itemizedlist>
+      </refsect2>
     </refsect1>
     <refsect1>
       <title>Works Referenced</title>
