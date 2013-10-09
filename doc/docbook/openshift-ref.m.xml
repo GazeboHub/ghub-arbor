@@ -15,7 +15,7 @@
     mpro:s="http://www.omg.org/spec/S/20070801/S%202.0%20UML%202%20Profile.xmi"
     >
   <info>
-    <title>&p; OpenShift Reference</title>
+    <title>&p; &ps.openshift; Reference</title>
   </info>
   <!--
 
@@ -44,6 +44,75 @@ TO DO:
       <refpurpose></refpurpose>
       <refclass>Work Product Definition</refclass>
     </refnamediv>
+
+    <refsect1>
+      <title>Summary</title>
+      <para>There are a number of approaches available from
+      &ps.openshift;, for signing up for an &ps.openshift; account:</para>
+      <itemizedlist>
+
+	<listitem>
+	  <para><productname
+		    xlink:href="https://www.openshift.com/products/online"
+		    >OpenShift Online</productname>, for
+	  individual accounts on the &ps.openshift;
+	  <glossterm>cloud</glossterm></para>
+	</listitem>
+
+	<listitem>
+	  <para><productname
+		    xlink:href="https://www.openshift.com/products/online"
+		    >OpenShift Enterprise PaaS</productname>,
+	  for <orgname>Red Hat</orgname> professional support in
+	  integration of &ps.openshift;
+	  with existing <acronym>IT</acronym>
+	  enterprise systems.<citation><xref linkend="b.installRhc.bwire2013"/></citation></para>
+	</listitem>
+
+	<listitem>
+	  <para><productname
+		    xlink:href="https://www.openshift.com/products/origin"
+		    >OpenShift Origin</productname>, for private
+	  hosting of the &ps.openshift; platform</para>
+	</listitem>
+      </itemizedlist>
+    </refsect1>
+
+    <refsect1>
+      <title>Works Referenced</title>
+      <bibliolist>
+
+	<biblioentry xml:id="b.installRhc.bwire2013" xreflabel="BWIRE2013">
+	  <citetitle
+	      xlink:href="http://virtualization.ulitzer.com/node/2731415"
+	      >Red Hat Advances OpenShift Enterprise with New Release</citetitle>
+
+	  <publisher><publishername>Business Wire</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xml:id="b.openShiftAccount.osfaq" xreflabel="OSFAQ">
+	  <citetitle
+	      xlink:href="https://www.openshift.com/faq"
+	      >Frequently Asked Questions</citetitle>
+
+	  <publisher><publishername>OpenShift by Red Hat</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+https://www.openshift.com/
+
+
+	<biblioentry xml:id="b.openShiftAccount.os" xreflabel="OS">
+	  <citetitle
+	      xlink:href="https://www.openshift.com/faq"
+	      >OpenShift</citetitle>
+	  <publisher><publishername>Red Hat</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+
+      </bibliolist>
+    </refsect1>
+
   </refentry>
 
   <refentry xml:id="r.installRhc" m:refclass="s:TaskDefinition">
@@ -63,34 +132,7 @@ TO DO:
 	<title>Prerequisites</title>
 	<itemizedlist>
 	  <listitem>
-	    <para>Sign up for an &ps.openshift;
-	    account<footnote>
-	    <para>Note that there are a number of approaches available
-	    from &ps.openshift;, for signing up
-	    for an &ps.openshift; account:</para>
-	    <itemizedlist>
-	      <listitem>
-		<para><productname
-			  xlink:href="https://www.openshift.com/products/online"
-			  >OpenShift Online</productname></para>
-	      </listitem>
-	      <listitem>
-		<para><productname
-			  xlink:href="https://www.openshift.com/products/online"
-			  >OpenShift Enterprise PaaS</productname>,
-		for <orgname>Red Hat</orgname> professional support in
-		integration of &ps.openshift;
-		with existing <acronym>IT</acronym>
-		enterprise systems.<citation><xref linkend="b.installRhc.bwire2013"/></citation></para>
-	      </listitem>
-	      <listitem>
-		<para><productname
-			  xlink:href="https://www.openshift.com/products/origin"
-			  >OpenShift Origin</productname>, for private
-		hosting of the &ps.openshift; platform</para>
-	      </listitem>
-	    </itemizedlist>
-	    </footnote></para>
+	    <para>Sign up for an <xref linkend="r.openShiftAccount"/></para>
 	  </listitem>
 	  <listitem>
 	    <para><xref linkend="r.installRuby"/></para>
@@ -119,15 +161,6 @@ TO DO:
 	      >Installing OpenShift RHC Client Tools</citetitle>
 
 	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
-	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
-	</biblioentry>
-
-	<biblioentry xml:id="b.installRhc.bwire2013" xreflabel="BWIRE2013">
-	  <citetitle
-	      xlink:href="http://virtualization.ulitzer.com/node/2731415"
-	      >Red Hat Advances OpenShift Enterprise with New Release</citetitle>
-
-	  <publisher><publishername>Business Wire</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
 
