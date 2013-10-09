@@ -33,7 +33,7 @@ TO DO:
   <refentry xml:id="r.rhc" m:refclass="s:ToolDefinition">
     <refnamediv>
       <refname><command>rhc</command></refname>
-      <refpurpose></refpurpose>
+      <refpurpose>Command line interface for &ps.openshift;</refpurpose>
       <refclass>Tool Definition</refclass>
       <m:attribute name="s:managedWorkProduct" xref="r.openShiftAccount"/>
     </refnamediv>
@@ -42,7 +42,7 @@ TO DO:
   <refentry xml:id="r.openShiftAccount" m:refclass="s:WorkProductDefinition">
     <refnamediv>
       <refname>&ps.openshift; Account</refname>
-      <refpurpose></refpurpose>
+      <refpurpose>User Account on &ps.openshift; Server</refpurpose>
       <refclass>Work Product Definition</refclass>
     </refnamediv>
 
@@ -116,9 +116,8 @@ TO DO:
 
   <refentry xml:id="r.installRhc" m:refclass="s:TaskDefinition">
     <refnamediv>
-      <refname>Install &ps.openshift; Online Client
-      Tools</refname>
-      <refpurpose>Developer Task</refpurpose>
+      <refname>Install &ps.openshift; Online Client Tools</refname>
+      <refpurpose>Tools Installation and Configuration </refpurpose>
       <refclass>Task Definition</refclass>
       <!-- pevious: r.installRuby, r.installGit -->
 
@@ -194,7 +193,7 @@ TO DO:
     <refnamediv>
       <refname>Install &ps.ruby; and
       <productname>RubyGems</productname></refname>
-      <refpurpose></refpurpose>
+      <refpurpose>Program Tools Installation</refpurpose>
       <refclass>Task Definition</refclass>
     </refnamediv>
     <refsect1>
@@ -352,23 +351,11 @@ TO DO:
       </refsect1>
     </refentry>
 
-  <refentry xml:id="r.openShiftClientToolsInstall" m:refclass="s:TaskDefinition">
-    <refnamediv>
-      <refname>Install &ps.openshift; Online Cient Tools</refname>
-      <refpurpose>Developer Task</refpurpose>
-      <refclass>Task Definition</refclass>
-      <!-- pevious: r.installRuby, r.installGit -->
-
-      <!--     <m:attribute name="s:usedTool" xref="r.rhc"/> -->
-      <!--   <m:attribute name="s:requiredQualification" xref="r.techDocAuthor"/> -->
-    </refnamediv>
-  </refentry>
-
 
   <refentry xml:id="r.installGit" m:refclass="s:TaskDefinition">
     <refnamediv>
       <refname>Install &ps.git;</refname>
-      <refpurpose></refpurpose>
+      <refpurpose><acronym>SCCM</acronym> Tool Installation</refpurpose>
       <refclass>Task Definition</refclass>
     </refnamediv>
     <refsect1>
