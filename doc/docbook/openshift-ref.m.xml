@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE reference [
 
 <!ENTITY % project.ent SYSTEM "project.ent">
@@ -84,8 +85,8 @@ TO DO:
 
 	<biblioentry xml:id="b.installRhc.bwire2013" xreflabel="BWIRE2013">
 	  <citetitle
-	      xlink:href="http://virtualization.ulitzer.com/node/2731415"
-	      >Red Hat Advances OpenShift Enterprise with New Release</citetitle>
+	      ><link xlink:href="http://virtualization.ulitzer.com/node/2731415"
+	      >Red Hat Advances OpenShift Enterprise with New Release</link></citetitle>
 
 	  <publisher><publishername>Business Wire</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -93,19 +94,17 @@ TO DO:
 
 	<biblioentry xml:id="b.openShiftAccount.osfaq" xreflabel="OSFAQ">
 	  <citetitle
-	      xlink:href="https://www.openshift.com/faq"
-	      >Frequently Asked Questions</citetitle>
+	      ><link xlink:href="https://www.openshift.com/faq"
+	      >Frequently Asked Questions</link></citetitle>
 
 	  <publisher><publishername>OpenShift by Red Hat</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
-https://www.openshift.com/
-
 
 	<biblioentry xml:id="b.openShiftAccount.os" xreflabel="OS">
 	  <citetitle
-	      xlink:href="https://www.openshift.com/faq"
-	      >OpenShift</citetitle>
+	      ><link xlink:href="https://www.openshift.com/faq"
+	      >OpenShift</link></citetitle>
 	  <publisher><publishername>Red Hat</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
@@ -178,8 +177,8 @@ https://www.openshift.com/
 
 	<biblioentry xml:id="b.installRhc.iorct" xreflabel="IORCT">
 	  <citetitle
-	      xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-	      >Installing OpenShift RHC Client Tools</citetitle>
+	      ><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
+	      >Installing OpenShift RHC Client Tools</link></citetitle>
 
 	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -319,18 +318,18 @@ https://www.openshift.com/
 
 	  <biblioentry xml:id="b.installRuby.dlRuby" xreflabel="DLRuby">
 	    <citetitle
-		xlink:href="https://www.ruby-lang.org/en/downloads/"
-		>Download Ruby</citetitle>
+		><link xlink:href="https://www.ruby-lang.org/en/downloads/"
+		>Download Ruby</link></citetitle>
 	    <publisher><publishername
-			   xlink:href="http://www.ruby-lang.org/"
-			   >Ruby Community</publishername></publisher>
+			   ><link xlink:href="http://www.ruby-lang.org/"
+			   >Ruby Community</link></publishername></publisher>
 	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	  </biblioentry>
 
 	  <biblioentry xml:id="b.installRuby.ari" xreflabel="ARI">
 	    <citetitle
-		xlink:href="http://rubyinstaller.org/about"
-		>About RubyInstaller</citetitle>
+		><link xlink:href="http://rubyinstaller.org/about"
+		>About RubyInstaller</link></citetitle>
 	    <publisher><publishername
 			   >RubyInstaller Contributors</publishername></publisher>
 	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -339,15 +338,15 @@ https://www.openshift.com/
 	  <biblioentry xml:id="b.installRuby.ctig" xreflabel="CTIG">
 	    <citetitle>Client Tools Installation Guide</citetitle>
 	    <publisher><publishername
-			   xlink:href="https://access.redhat.com/"
-			   >Red Hat Customer Portal</publishername></publisher>
+			   ><link xlink:href="https://access.redhat.com/"
+			   >Red Hat Customer Portal</link></publishername></publisher>
 	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	  </biblioentry>
 
 	  <biblioentry xml:id="b.installRuby.iorct" xreflabel="IORCT">
 	    <citetitle
-		xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-		>Installing OpenShift RHC Client Tools</citetitle>
+		><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
+		>Installing OpenShift RHC Client Tools</link></citetitle>
 
 	    <publisher><publishername>Red Hat, Inc</publishername></publisher>
 	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -413,8 +412,8 @@ https://www.openshift.com/
 
 	  <biblioentry xml:id="b.installGit.iorct" xreflabel="IORCT">
 	    <citetitle
-		xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-		>Installing OpenShift RHC Client Tools</citetitle>
+		><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
+		>Installing OpenShift RHC Client Tools</link></citetitle>
 
 	    <publisher><publishername>Red Hat, Inc</publishername></publisher>
 	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
