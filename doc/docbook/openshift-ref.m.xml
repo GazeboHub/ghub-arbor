@@ -4,8 +4,9 @@
 %project.ent;
 ]>
 <reference version="ghub-docbook-1.0"
+	   xmlns="http://docbook.org/ns/docbook"
 	   mpro:s="http://www.omg.org/spec/S/20070801/S%202.0%20UML%202%20Profile.xmi"
-	   xml:id="ref.openshift" xmlns="http://docbook.org/ns/docbook"
+	   xml:id="ref.openshift"
 	   xmlns:xlink="http://www.w3.org/1999/xlink"
 	   xmlns:xi="http://www.w3.org/2001/XInclude"
 	   xmlns:ns5="http://www.w3.org/1998/Math/MathML"
@@ -60,12 +61,12 @@ TO DO:
     described of this document.</para>
 
     <table>
-      <title>Overview</title>
+      <title>Overview &mdash; Client Installation</title>
 
       <tgroup cols="4">
 	<colspec colname="col.elt"/>
-	<colspec colname="col.class"/>
-	<colspec colname="col.assoc.type"/>
+	<colspec colname="col.class" align="center"/>
+	<colspec colname="col.assoc.type" align="center"/>
 	<colspec colname="col.assoc.end"/>
 	<spanspec spanname="span.assoc"
 		  namest="col.assoc.type"
@@ -76,7 +77,7 @@ TO DO:
 	    <entry morerows="1" align="center"
 		   >Element</entry>
 	    <entry morerows="1" align="center"
-		   ><acronym>SPEM</acronym> Class</entry>
+		   ><acronym>SPEM</acronym> Sterotype</entry>
 	    <entry spanname="span.assoc" align="center"
 		   >Associations</entry>
 	  </row>
