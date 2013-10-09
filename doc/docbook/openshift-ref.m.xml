@@ -330,7 +330,10 @@ TO DO:
 	  </biblioentry>
 
 	  <biblioentry xml:id="b.installRuby.ctig" xreflabel="CTIG">
-	    <citetitle>Client Tools Installation Guide</citetitle>
+	    <citetitle
+		><link
+		     xlink:href="https://access.redhat.com/site/documentation/en-US/OpenShift_Online/2.0/html/Client_Tools_Installation_Guide/index.html"
+		     >Client Tools Installation Guide</link></citetitle>
 	    <publisher><publishername
 			   ><link xlink:href="https://access.redhat.com/"
 			   >Red Hat Customer Portal</link></publishername></publisher>
