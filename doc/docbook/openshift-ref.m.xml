@@ -86,7 +86,7 @@ TO DO:
 	<biblioentry xml:id="b.installRhc.bwire2013" xreflabel="BWIRE2013">
 	  <citetitle
 	      ><link xlink:href="http://virtualization.ulitzer.com/node/2731415"
-	      >Red Hat Advances OpenShift Enterprise with New Release</link></citetitle>
+		     >Red Hat Advances OpenShift Enterprise with New Release</link></citetitle>
 
 	  <publisher><publishername>Business Wire</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -95,7 +95,7 @@ TO DO:
 	<biblioentry xml:id="b.openShiftAccount.osfaq" xreflabel="OSFAQ">
 	  <citetitle
 	      ><link xlink:href="https://www.openshift.com/faq"
-	      >Frequently Asked Questions</link></citetitle>
+		     >Frequently Asked Questions</link></citetitle>
 
 	  <publisher><publishername>OpenShift by Red Hat</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -104,7 +104,7 @@ TO DO:
 	<biblioentry xml:id="b.openShiftAccount.os" xreflabel="OS">
 	  <citetitle
 	      ><link xlink:href="https://www.openshift.com/faq"
-	      >OpenShift</link></citetitle>
+		     >OpenShift</link></citetitle>
 	  <publisher><publishername>Red Hat</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
@@ -177,7 +177,7 @@ TO DO:
 	<biblioentry xml:id="b.installRhc.iorct" xreflabel="IORCT">
 	  <citetitle
 	      ><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-	      >Installing OpenShift RHC Client Tools</link></citetitle>
+		     >Installing OpenShift RHC Client Tools</link></citetitle>
 
 	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -207,7 +207,7 @@ TO DO:
 	Once &ps.ruby; is installed, it may be
 	recommended to use a package management system unique to
 	&ps.ruby;, such as <productname
-	  xlink:href="https://rvm.io/rvm">RVM</productname> or
+	xlink:href="https://rvm.io/rvm">RVM</productname> or
 	<productname
 	    xlink:href="https://github.com/sstephenson/rbenv"
 	    >rbenv</productname>.
@@ -289,67 +289,67 @@ TO DO:
 	</para>
       </refsect2>
 
-	<refsect2>
-	  <title>Installing &ps.ruby; on &ps.mswin; Platforms</title>
+      <refsect2>
+	<title>Installing &ps.ruby; on &ps.mswin; Platforms</title>
 
-	  <para>
-	    Refer to <productname
-	    xlink:href="http://rubyinstaller.org/"
-	    >RubyInstaller</productname>
-	    for <productname>Windows</productname><citation><xref
-	    linkend="b.installRuby.dlRuby"/></citation>. (Note that
-	    <productname>RubyGems</productname> is distributed within
-	    <productname>RubyInstaller</productname><citation><xref
-	    linkend="b.installRuby.ari"/></citation>)
-	  </para>
-	</refsect2>
-      </refsect1>
+	<para>
+	  Refer to <productname
+	  xlink:href="http://rubyinstaller.org/"
+	  >RubyInstaller</productname>
+	  for <productname>Windows</productname><citation><xref
+	  linkend="b.installRuby.dlRuby"/></citation>. (Note that
+	  <productname>RubyGems</productname> is distributed within
+	  <productname>RubyInstaller</productname><citation><xref
+	  linkend="b.installRuby.ari"/></citation>)
+	</para>
+      </refsect2>
+    </refsect1>
 
-      <refsect1>
-	<title>Works Referenced</title>
-	<bibliolist>
+    <refsect1>
+      <title>Works Referenced</title>
+      <bibliolist>
 
-	  <biblioentry xml:id="b.installRuby.dlRuby" xreflabel="DLRuby">
-	    <citetitle
-		><link xlink:href="https://www.ruby-lang.org/en/downloads/"
-		>Download Ruby</link></citetitle>
-	    <publisher><publishername
-			   ><link xlink:href="http://www.ruby-lang.org/"
-			   >Ruby Community</link></publishername></publisher>
-	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
-	  </biblioentry>
+	<biblioentry xml:id="b.installRuby.dlRuby" xreflabel="DLRuby">
+	  <citetitle
+	      ><link xlink:href="https://www.ruby-lang.org/en/downloads/"
+		     >Download Ruby</link></citetitle>
+	  <publisher><publishername
+			 ><link xlink:href="http://www.ruby-lang.org/"
+				>Ruby Community</link></publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
 
-	  <biblioentry xml:id="b.installRuby.ari" xreflabel="ARI">
-	    <citetitle
-		><link xlink:href="http://rubyinstaller.org/about"
-		>About RubyInstaller</link></citetitle>
-	    <publisher><publishername
-			   >RubyInstaller Contributors</publishername></publisher>
-	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
-	  </biblioentry>
+	<biblioentry xml:id="b.installRuby.ari" xreflabel="ARI">
+	  <citetitle
+	      ><link xlink:href="http://rubyinstaller.org/about"
+		     >About RubyInstaller</link></citetitle>
+	  <publisher><publishername
+			 >RubyInstaller Contributors</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
 
-	  <biblioentry xml:id="b.installRuby.ctig" xreflabel="CTIG">
-	    <citetitle
-		><link
-		     xlink:href="https://access.redhat.com/site/documentation/en-US/OpenShift_Online/2.0/html/Client_Tools_Installation_Guide/index.html"
-		     >Client Tools Installation Guide</link></citetitle>
-	    <publisher><publishername
-			   ><link xlink:href="https://access.redhat.com/"
-			   >Red Hat Customer Portal</link></publishername></publisher>
-	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
-	  </biblioentry>
+	<biblioentry xml:id="b.installRuby.ctig" xreflabel="CTIG">
+	  <citetitle
+	      ><link
+		   xlink:href="https://access.redhat.com/site/documentation/en-US/OpenShift_Online/2.0/html/Client_Tools_Installation_Guide/index.html"
+		   >Client Tools Installation Guide</link></citetitle>
+	  <publisher><publishername
+			 ><link xlink:href="https://access.redhat.com/"
+				>Red Hat Customer Portal</link></publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
 
-	  <biblioentry xml:id="b.installRuby.iorct" xreflabel="IORCT">
-	    <citetitle
-		><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-		>Installing OpenShift RHC Client Tools</link></citetitle>
+	<biblioentry xml:id="b.installRuby.iorct" xreflabel="IORCT">
+	  <citetitle
+	      ><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
+		     >Installing OpenShift RHC Client Tools</link></citetitle>
 
-	    <publisher><publishername>Red Hat, Inc</publishername></publisher>
-	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
-	  </biblioentry>
-	</bibliolist>
-      </refsect1>
-    </refentry>
+	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+      </bibliolist>
+    </refsect1>
+  </refentry>
 
 
   <refentry xml:id="r.installGit" m:refclass="s:TaskDefinition">
@@ -390,20 +390,20 @@ TO DO:
 
     </refsect1>
 
-      <refsect1>
-	<title>Works Referenced</title>
-	<bibliolist>
+    <refsect1>
+      <title>Works Referenced</title>
+      <bibliolist>
 
-	  <biblioentry xml:id="b.installGit.iorct" xreflabel="IORCT">
-	    <citetitle
-		><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-		>Installing OpenShift RHC Client Tools</link></citetitle>
+	<biblioentry xml:id="b.installGit.iorct" xreflabel="IORCT">
+	  <citetitle
+	      ><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
+		     >Installing OpenShift RHC Client Tools</link></citetitle>
 
-	    <publisher><publishername>Red Hat, Inc</publishername></publisher>
-	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
-	  </biblioentry>
-	</bibliolist>
-      </refsect1>
+	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+      </bibliolist>
+    </refsect1>
   </refentry>
 
 
