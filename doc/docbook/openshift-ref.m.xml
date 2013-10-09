@@ -71,6 +71,21 @@ TO DO:
     <refsect1>
       <title>Summary</title>
 
+      <para>The exact installation process for
+      <productname>Ruby</productname> naturally will vary by host
+      machine platform</para>
+
+      <para>
+	Once <productname>Ruby</productname> is installed, it may be
+	recommended to use a package management system unique to
+	<productname>Ruby</productname>, such as <productname
+	  xlink:href="https://rvm.io/rvm">RVM</productname> or
+	<productname
+	    xlink:href="https://github.com/sstephenson/rbenv"
+	    >rbenv</productname>.
+      </para>
+
+
       <refsect2>
 	<title>Installing <productname>Ruby</productname> on
 	<productname>Linux</productname> Platforms</title>
@@ -96,7 +111,8 @@ TO DO:
 
 	<refsect3>
 	  <title><productname>Debian</productname>:
-	  <symbol>ruby</symbol> Virtual Package</title>
+	  Packages for <productname>Ruby</productname>
+	  Platform Component Installation</title>
 
 	  <para>
 	    A <glossterm>virtual package</glossterm>
@@ -110,36 +126,36 @@ TO DO:
 	    repository</glossterm>providing a
 	    <productname>Ruby</productname>
 	    <glossterm>interpreter</glossterm>.
-	  </para>
-
-	  <para>
-	    An alternate
+	    Alternately, a
 	    <glossterm>virtual package</glossterm> is available, named
 	    <symbol>ruby-full</symbol>, such that effectively
 	    depends on a broader set of packages for the
 	    <productname>Ruby</productname> platform.
 	  </para>
 
-	  <para>Additionally, the <symbol>rubygems</symbol> package
-	  should be installed &mdash; optionally along with
-	  <symbol>rubygems-doc</symbol> &mdash;   as to be able to
-	  install the <symbol>rhc</symbol> gem for
-	  <productname>Ruby</productname>, via the
-	  <command>gem</command> command. Note, however, that the
-	  <symbol>rubygems</symbol> package may depend on a specific
-	  version of <productname>Ruby</productname>, such that may be
-	  older than the most recently released version. There is also
-	  the <symbol>ruby-switch</symbol> package, for developing on
-	  mutliple versions of the <productname>Ruby</productname>
-	  interpreter.</para>
+	  <para>
+	    Additionally, the <symbol>rubygems</symbol> package
+	    should be installed &mdash; optionally along with
+	    <symbol>rubygems-doc</symbol> &mdash;  as to be able to
+	    install the <symbol>rhc</symbol> gem for
+	    <productname>Ruby</productname>, via the
+	    <command>gem</command> command. Note, however, that the
+	    <symbol>rubygems</symbol> package may depend on a specific
+	    version of <productname>Ruby</productname>, such that may be
+	    older than the most recently released version. There is also
+	    the <symbol>ruby-switch</symbol> package, for developing on
+	    mutliple versions of the <productname>Ruby</productname>
+	    interpreter.
+	  </para>
 
-	  <para>Lastly, the package,
-	  <glossterm>rubygems-integration</glossterm> would be
-	  recommended, as in order to ensure that
-	  <productname>Debian</productname> packaged
-	  <productname>Ruby</productname> components, when installed,
-	  will be visible to <productname>RubyGems</productname>.</para>
-
+	  <para>
+	    Lastly, the package,
+	    <glossterm>rubygems-integration</glossterm> would be
+	    recommended, as in order to ensure that
+	    <productname>Debian</productname> packaged
+	    <productname>Ruby</productname> components, when installed,
+	    will be visible to <productname>RubyGems</productname>.
+	  </para>
 
 	  <programlisting>sudo aptitude install rubygems rubygems-doc \
 	  rubygems-integration ruby-switch</programlisting>
@@ -150,20 +166,19 @@ TO DO:
       <refsect2>
 	<title>Installing <productname>Ruby</productname> on
 	<productname>Apple OS X</productname> Platforms</title>
+
 	<para>
-	  On the <productname>OS X</productname> platform, it may be
-	  recommended to use a package management system unique to
-	  <productname>Ruby</productname>, such as <productname
-	  xlink:href="https://rvm.io/rvm">RVM</productname> or
-	  <productname
-	      xlink:href="https://github.com/sstephenson/rbenv"
-	      >rbenv</productname>.
+	  If <productname>Ruby</productname> is not available on the
+	  <productname>OS X</productname>
+	  <glossterm>machine</glossterm>, it may be installed via
+	  <productname xlink:href="https://developer.apple.com/xcode/"
+		       >Xcode</productname>.
 	  Alternately,
 	  the <productname
 	  xlink:href="http://mxcl.github.com/homebrew/"
 	  >Homebrew</productname> package manager
 	  can be used to install <productname>Ruby</productname> on
-	  <productname>OS X</productname>.
+	  <productname>OS X</productname> platforms.
 	</para>
       </refsect2>
 
@@ -173,9 +188,9 @@ TO DO:
 	  Platforms</title>
 
 	  <para>
-	    Refer to <link
+	    Refer to <productname
 	    xlink:href="http://rubyinstaller.org/"
-	    ><productname>RubyInstaller</productname>
+	    >RubyInstaller</productname>
 	    for <productname>Windows</productname><citation><xref
 	    linkend="b.installRuby.dlRuby"/></citation>. (Note that
 	    <productname>RubyGems</productname> is distributed within
@@ -228,12 +243,76 @@ TO DO:
       </refsect1>
     </refentry>
 
-    <refentry xml:id="r.rubyInstallation" m:refclass="s:WorkProductDefinition">
-      <refnamediv>
-	<refname><productname>Ruby</productname> Installation</refname>
-	<refpurpose></refpurpose>
-	<refclass>Work Product Definition</refclass>
-      </refnamediv>
+  <refentry xml:id="r.openShiftClientToolsInstall" m:refclass="s:TaskDefinition">
+    <refnamediv>
+      <refname>Install <productname>OpenShift</productname> Online Cient
+      Tools</refname>
+      <refpurpose>Developer Task</refpurpose>
+      <refclass>Task Definition</refclass>
+      <!-- pevious: r.installRuby, r.installGit -->
+
+      <!--     <m:attribute name="s:usedTool" xref="r.rhc"/> -->
+      <!--   <m:attribute name="s:requiredQualification" xref="r.techDocAuthor"/> -->
+    </refnamediv>
+  </refentry>
+
+
+  <refentry xml:id="r.installGit" m:refclass="s:TaskDefinition">
+    <refnamediv>
+      <refname>Install <productname>Git</productname></refname>
+      <refpurpose></refpurpose>
+      <refclass>Task Definition</refclass>
+    </refnamediv>
+    <refsect1>
+      <title>Summary</title>
+
+      <refsect2>
+	<title>Installing <productname>Git</productname> on
+	<productname>Linux</productname> Platforms</title>
+	<refsect3>
+	  <title>On <productname>Debian</productname></title>
+
+	  <programlisting>aptitude install git</programlisting>
+
+	</refsect3>
+      </refsect2>
+
+      <refsect2>
+	<title>Installing <productname>Git</productname> on
+	<productname>Apple OS X</productname> Platforms</title>
+	<para>
+	  cf. <productname
+	  xlink:href="https://code.google.com/p/git-osx-installer/"
+	  >Git for OS X</productname></para>
+      </refsect2>
+
+      <refsect2>
+	<title>Installing <productname>Git</productname> on
+	<productname>Microsoft Windows</productname>
+	Platforms</title>
+	<para>cf.
+	<productname
+	    xlink:href="https://code.google.com/p/tortoisegit/"
+	    >TortoiseGit</productname>
+	</para>
+      </refsect2>
+
+    </refsect1>
+
+      <refsect1>
+	<title>Works Referenced</title>
+	<bibliolist>
+
+	  <biblioentry xml:id="b.installGit.iorct" xreflabel="IORCT">
+	    <citetitle
+		xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
+		>Installing OpenShift RHC Client Tools</citetitle>
+
+	    <publisher><publishername>Red Hat, Inc</publishername></publisher>
+	    <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	  </biblioentry>
+	</bibliolist>
+      </refsect1>
     </refentry>
 
 
