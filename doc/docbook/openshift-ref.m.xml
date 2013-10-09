@@ -33,7 +33,7 @@ TO DO:
   <refentry xml:id="r.rhc" m:refclass="s:ToolDefinition">
     <refnamediv>
       <refname><command>rhc</command></refname>
-      <refpurpose>Command line interface for &ps.openshift;</refpurpose>
+      <refpurpose>Command line interface for &ps.openshift; Online Client Tools</refpurpose>
       <refclass>Tool Definition</refclass>
       <m:attribute name="s:managedWorkProduct" xref="r.openShiftAccount"/>
     </refnamediv>
@@ -401,6 +401,13 @@ TO DO:
 
 	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xml:id="b.installGit.gd" xreflabel="GITDOCS">
+	  <citetitle><link xlink:href="http://git-scm.com/doc"
+			   >Git Documentation</link></citetitle>
+	  <publisher><publishername>Software Freedom Conservancy</publishername></publisher>
+	  <bibliomisc>accessed 9 October, 2013</bibliomisc>
 	</biblioentry>
       </bibliolist>
     </refsect1>
