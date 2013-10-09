@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE reference [
-
 <!ENTITY % project.ent SYSTEM "project.ent">
 %project.ent;
-
 ]>
-<reference
-    xmlns="http://docbook.org/ns/docbook"
-    version="ghub-docbook-1.0"
-    xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xml:id="ref.openshift"
-    xmlns:m="http://ghub.sourceforge.net/ns/model"
-    xmlns:mpro="http://ghub.sourceforge.net/ns/model-profile"
-    mpro:s="http://www.omg.org/spec/S/20070801/S%202.0%20UML%202%20Profile.xmi"
-    >
+<reference version="ghub-docbook-1.0"
+	   mpro:s="http://www.omg.org/spec/S/20070801/S%202.0%20UML%202%20Profile.xmi"
+	   xml:id="ref.openshift" xmlns="http://docbook.org/ns/docbook"
+	   xmlns:xlink="http://www.w3.org/1999/xlink"
+	   xmlns:xi="http://www.w3.org/2001/XInclude"
+	   xmlns:ns5="http://www.w3.org/1998/Math/MathML"
+	   xmlns:ns4="http://www.w3.org/2000/svg"
+	   xmlns:ns3="http://www.w3.org/1999/xhtml"
+	   xmlns:ns="http://docbook.org/ns/docbook"
+	   xmlns:mpro="http://ghub.sourceforge.net/ns/model-profile"
+	   xmlns:m="http://ghub.sourceforge.net/ns/model">
   <info>
     <title>&p; &ps.openshift; Reference</title>
+    <author>
+      <personname>Sean Champ</personname>
+    </author>
+    <pubdate>9 October 2013</pubdate>
   </info>
+
   <!--
 
 Note that this document describes part of a way to loosely couple a DocBook XML documemt to the S metamodel's UML profile, as in developing an approach for a combined document-driven and model-driven design and engineering practice.
@@ -30,388 +34,597 @@ TO DO:
 
   -->
 
-  <refentry xml:id="r.rhc" m:refclass="s:ToolDefinition">
+  <partintro>
+    <info>
+      <title>Overview</title>
+    </info>
+
+    <para>This document endeavors to describe &ps.openshift; and supporting
+    system components from a point of view structured in accord with the
+    <productname>Software &amp; Systems Process Engineering Meta-Model
+    Specification</productname> (<acronym>SPEM</acronym>) version
+    <productnumber>2.0</productnumber> <citation>
+	<xref linkend="b.spem"/>
+      </citation>. The following table summarizes the <acronym>SPEM</acronym>
+    <glossterm>model</glossterm> <glossterm>elements</glossterm> described of
+    this document, listing each of those <glossterm>elements'</glossterm>
+    reference name, <acronym>SPEM</acronym> class type, and formal and
+    informal <footnote>
+	<para>namely, "See also", such as could be formally represented in
+	extension of the <acronym>SPEM</acronym> model, using an
+	<symbol>ownedParameter</symbol> property onto each respective
+	model element making reference to another model element by way of the
+	"See also" relation.</para>
+      </footnote> associations to other <glossterm>elements</glossterm> within
+    the <acronym>SPEM</acronym> <glossterm>model</glossterm> effectively
+    described of this document.</para>
+
+    <table>
+      <title>Overview</title>
+
+      <tgroup cols="4">
+	<colspec colname="col.elt"/>
+	<colspec colname="col.class"/>
+	<colspec colname="col.assoc.type"/>
+	<colspec colname="col.assoc.end"/>
+	<spanspec spanname="span.assoc"
+		  namest="col.assoc.type"
+		  nameend="col.assoc.end"/>
+
+	<thead>
+	  <row>
+	    <entry morerows="1" align="center"
+		   >Element</entry>
+	    <entry morerows="1" align="center"
+		   ><acronym>SPEM</acronym> Class</entry>
+	    <entry spanname="span.assoc" align="center"
+		   >Associations</entry>
+	  </row>
+	  <row>
+	    <entry colname="col.assoc.type"
+		   align="center">Assoc. Type</entry>
+	    <entry colname="col.assoc.type"
+		   align="center">Element</entry>
+	  </row>
+	</thead>
+
+	<tbody>
+	  <row>
+	    <entry morerows="1">
+	      <xref linkend="r.openshift.rhc"/>
+	    </entry>
+
+	    <entry morerows="1">Tool Definition</entry>
+
+	    <entry>Managed Work Product</entry>
+	    <entry>
+	      <xref
+		  linkend="r.openshift.openShiftAccount"/>
+	    </entry>
+
+	  </row>
+
+	  <row>
+	    <entry colname="col.assoc.type">Installation Task</entry>
+	    <entry>
+	      <xref linkend="r.openshift.installRhc"/>
+	    </entry>
+	  </row>
+
+	  <row>
+	    <entry>
+	      <xref linkend="r.openshift.openShiftAccount"/>
+	    </entry>
+	    <entry>Work Product Definition</entry>
+	    <entry>Managed By</entry>
+	    <entry><xref linkend="r.openshift.rhc"/></entry>
+	  </row>
+
+	  <row>
+	    <entry morerows="5">
+	      <xref linkend="r.openshift.installRhc"/>
+	    </entry>
+	    <entry  morerows="5">Task Definition</entry>
+
+	    <entry>Step</entry>
+	    <entry>Sign up for <xref
+	    linkend="r.openshift.openShiftAccount"/></entry>
+	  </row>
+	  <row>
+	    <entry>Step</entry>
+	    <entry><xref linkend="r.openshift.installRuby"/></entry>
+	  </row>
+	  <row>
+	    <entry>Step</entry>
+	    <entry><xref linkend="r.openshift.installGit"/></entry>
+	  </row>
+	  <row>
+	    <entry>Step</entry>
+	    <entry>Install <symbol>rhc</symbol> <productname>Ruby
+	    Gem</productname></entry>
+	  </row>
+	  <row>
+	    <entry>Step</entry>
+	    <entry><command>rhc setup</command></entry>
+	  </row>
+	  <row>
+	    <entry>Installs Tool</entry>
+	    <entry>
+	      <xref linkend="r.openshift.rhc"/>
+	    </entry>
+	  </row>
+
+	  <row>
+	    <entry>
+	      <xref linkend="r.openshift.installRuby"/>
+	    </entry>
+	    <entry>Task Definition</entry>
+	    <entry>Step In Task Definition</entry>
+	    <entry><xref linkend="r.openshift.installRhc"/></entry>
+	  </row>
+
+	  <row>
+	    <entry>
+	      <xref linkend="r.openshift.installGit"/>
+	    </entry>
+	    <entry>Task Definition</entry>
+	    <entry>Step In Task Definition</entry>
+	    <entry><xref linkend="r.openshift.installRhc"/></entry>
+	  </row>
+	</tbody>
+      </tgroup>
+    </table>
+
+    <bibliolist>
+      <biblioentry xreflabel="SPEM" xml:id="b.spem">
+	<citetitle>
+	  <link xlink:href="http://www.omg.org/spec/SPEM/2.0/">Software &amp;
+	  Systems Process Engineering Meta-Model Specification</link>
+	</citetitle>
+
+	<publisher>
+	  <publishername>Object Management Group</publishername>
+	</publisher>
+
+	<pubdate>April 2008</pubdate>
+      </biblioentry>
+    </bibliolist>
+  </partintro>
+
+  <refentry m:refclass="s:ToolDefinition" xml:id="r.openshift.rhc">
     <refnamediv>
-      <refname><command>rhc</command></refname>
-      <refpurpose>Command line interface for &ps.openshift; Online Client Tools</refpurpose>
+      <refname>
+	<command>rhc</command>
+      </refname>
+
+      <refpurpose>Command line interface for &ps.openshift; Online Client
+      Tools</refpurpose>
+
       <refclass>Tool Definition</refclass>
-      <m:attribute name="s:managedWorkProduct" xref="r.openShiftAccount"/>
+
+      <m:attribute name="s:managedWorkProduct"
+		   xref="r.openshift.openShiftAccount"/>
     </refnamediv>
   </refentry>
 
-  <refentry xml:id="r.openShiftAccount" m:refclass="s:WorkProductDefinition">
+  <refentry m:refclass="s:WorkProductDefinition"
+	    xml:id="r.openshift.openShiftAccount">
     <refnamediv>
       <refname>&ps.openshift; Account</refname>
+
       <refpurpose>User Account on &ps.openshift; Server</refpurpose>
+
       <refclass>Work Product Definition</refclass>
     </refnamediv>
 
     <refsect1>
       <title>Summary</title>
-      <para>There are a number of approaches available from
-      &ps.openshift;, for signing up for an &ps.openshift; account:</para>
-      <itemizedlist>
 
+      <para>There are a number of approaches available from &ps.openshift;,
+      for signing up for an &ps.openshift; account:</para>
+
+      <itemizedlist>
 	<listitem>
 	  <para><productname
-		    xlink:href="https://www.openshift.com/products/online"
-		    >OpenShift Online</productname>, for
-	  individual accounts on the &ps.openshift;
+	  xlink:href="https://www.openshift.com/products/online">OpenShift
+	  Online</productname>, for individual accounts on the &ps.openshift;
 	  <glossterm>cloud</glossterm></para>
 	</listitem>
 
 	<listitem>
 	  <para><productname
-		    xlink:href="https://www.openshift.com/products/online"
-		    >OpenShift Enterprise PaaS</productname>,
-	  for <orgname>Red Hat</orgname> professional support in
-	  integration of &ps.openshift;
-	  with existing <acronym>IT</acronym>
-	  enterprise systems.<citation><xref linkend="b.installRhc.bwire2013"/></citation></para>
+	  xlink:href="https://www.openshift.com/products/online">OpenShift
+	  Enterprise PaaS</productname>, for <orgname>Red Hat</orgname>
+	  professional support in integration of &ps.openshift; with existing
+	  <acronym>IT</acronym> enterprise systems.<citation>
+	      <xref linkend="b.openShiftAccount.bwire2013"/>
+	    </citation></para>
 	</listitem>
 
 	<listitem>
 	  <para><productname
-		    xlink:href="https://www.openshift.com/products/origin"
-		    >OpenShift Origin</productname>, for private
-	  hosting of the &ps.openshift; platform</para>
+	  xlink:href="https://www.openshift.com/products/origin">OpenShift
+	  Origin</productname>, for private hosting of the &ps.openshift;
+	  platform</para>
 	</listitem>
       </itemizedlist>
     </refsect1>
 
     <refsect1>
       <title>Works Referenced</title>
+
       <bibliolist>
+	<biblioentry xreflabel="BWIRE2013" xml:id="b.openShiftAccount.bwire2013">
+	  <citetitle>
+	    <link
+	    xlink:href="http://virtualization.ulitzer.com/node/2731415">Red
+	    Hat Advances OpenShift Enterprise with New Release</link>
+	  </citetitle>
 
-	<biblioentry xml:id="b.installRhc.bwire2013" xreflabel="BWIRE2013">
-	  <citetitle
-	      ><link xlink:href="http://virtualization.ulitzer.com/node/2731415"
-		     >Red Hat Advances OpenShift Enterprise with New Release</link></citetitle>
+	  <publisher>
+	    <publishername>Business Wire</publishername>
+	  </publisher>
 
-	  <publisher><publishername>Business Wire</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
 
-	<biblioentry xml:id="b.openShiftAccount.osfaq" xreflabel="OSFAQ">
-	  <citetitle
-	      ><link xlink:href="https://www.openshift.com/faq"
-		     >Frequently Asked Questions</link></citetitle>
+	<biblioentry xreflabel="OSFAQ" xml:id="b.openShiftAccount.osfaq">
+	  <citetitle>
+	    <link xlink:href="https://www.openshift.com/faq">Frequently Asked
+	    Questions</link>
+	  </citetitle>
 
-	  <publisher><publishername>OpenShift by Red Hat</publishername></publisher>
+	  <publisher>
+	    <publishername>OpenShift by Red Hat</publishername>
+	  </publisher>
+
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
 
-	<biblioentry xml:id="b.openShiftAccount.os" xreflabel="OS">
-	  <citetitle
-	      ><link xlink:href="https://www.openshift.com/faq"
-		     >OpenShift</link></citetitle>
-	  <publisher><publishername>Red Hat</publishername></publisher>
+	<biblioentry xreflabel="OS" xml:id="b.openShiftAccount.os">
+	  <citetitle>
+	    <link xlink:href="https://www.openshift.com/faq">OpenShift</link>
+	  </citetitle>
+
+	  <publisher>
+	    <publishername>Red Hat</publishername>
+	  </publisher>
+
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
-
       </bibliolist>
     </refsect1>
-
   </refentry>
 
-  <refentry xml:id="r.installRhc" m:refclass="s:TaskDefinition">
+  <refentry m:refclass="s:TaskDefinition" xml:id="r.openshift.installRhc">
     <refnamediv>
       <refname>Install &ps.openshift; Online Client Tools</refname>
-      <refpurpose>Tools Installation and Configuration </refpurpose>
-      <refclass>Task Definition</refclass>
-      <!-- pevious: r.installRuby, r.installGit -->
 
-      <!--     <m:attribute name="s:usedTool" xref="r.rhc"/> -->
-      <!--   <m:attribute name="s:requiredQualification" xref="r.techDocAuthor"/> -->
+      <refpurpose>Tools Installation and Configuration</refpurpose>
+
+      <refclass>Task Definition</refclass>
     </refnamediv>
+
     <refsect1>
       <title>Summary</title>
+
       <refsect2>
-	<title>Prerequisites</title>
+	<title>Steps</title>
+
 	<itemizedlist>
 	  <listitem>
-	    <para>Sign up for an <xref linkend="r.openShiftAccount"/></para>
+	    <para>Sign up for an <xref
+	    linkend="r.openshift.openShiftAccount"/></para>
 	  </listitem>
+
 	  <listitem>
-	    <para><xref linkend="r.installRuby"/></para>
+	    <para>
+	      <xref linkend="r.openshift.installRuby"/>
+	    </para>
 	  </listitem>
+
 	  <listitem>
-	    <para><xref linkend="r.installGit"/></para>
+	    <para>
+	      <xref linkend="r.openshift.installGit"/>
+	    </para>
 	  </listitem>
+
+	  <listitem>
+	    <para>install <symbol>rhc</symbol> <productname>Ruby
+	    Gem</productname></para>
+	  </listitem>
+
+	  <listitem>
+	    <para><command>rhc setup</command></para>
+	  </listitem>
+
 	</itemizedlist>
       </refsect2>
+
       <refsect2>
 	<title>Procedure</title>
 
-	<programlisting
-	    >gem install rhc &amp;&amp;
+	<programlisting>gem install rhc &amp;&amp;
 	rhc setup</programlisting>
-
       </refsect2>
+
       <refsect2>
 	<title>Results: Initial <command>rhc setup</command> on
 	<productname>OpenShift Online</productname></title>
+
 	<itemizedlist>
 	  <listitem>
-	    <para>SSH Key Pair (Optional) &mdash;
+	    <para>SSH Key Pair (Optional) —
 	    <filename>$HOME/.ssh/id_rsa</filename> (private key) and
-	    <filename>$HOME/.ssh/id_rsa.pub</filename> (public key),
-	    with public key optionally uploaded to &ps.openshift;
-	    server via <productname>SSH</productname>
-	    (cf. <command>rhc sshkey</command>)</para>
+	    <filename>$HOME/.ssh/id_rsa.pub</filename> (public key), with
+	    public key optionally uploaded to &ps.openshift; server via
+	    <productname>SSH</productname> (cf. <command>rhc
+	    sshkey</command>)</para>
 	  </listitem>
+
 	  <listitem>
-	    <para>Application Namespace (optional, but required for
-	    creating an &ps.openshift; application) (cf. <command>rhc
-	    create-domain</command>) (must be unique across all
-	    &ps.openshift; users) (will be part of each application's
-	    domain name under &ps.openshift;)</para>
+	    <para>Application Namespace (optional, but required for creating
+	    an &ps.openshift; application) (cf. <command>rhc
+	    create-domain</command>) (must be unique across all &ps.openshift;
+	    users) (will be part of each application's domain name under
+	    &ps.openshift;)</para>
 	  </listitem>
 	</itemizedlist>
       </refsect2>
     </refsect1>
+
     <refsect1>
       <title>Works Referenced</title>
+
       <bibliolist>
+	<biblioentry xreflabel="IORCT" xml:id="b.installRhc.iorct">
+	  <citetitle>
+	    <link
+	    xlink:href="https://www.openshift.com/developers/rhc-client-tools-install">Installing
+	    OpenShift RHC Client Tools</link>
+	  </citetitle>
 
-	<biblioentry xml:id="b.installRhc.iorct" xreflabel="IORCT">
-	  <citetitle
-	      ><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-		     >Installing OpenShift RHC Client Tools</link></citetitle>
+	  <publisher>
+	    <publishername>Red Hat, Inc</publishername>
+	  </publisher>
 
-	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
-
       </bibliolist>
     </refsect1>
   </refentry>
 
-
-  <refentry xml:id="r.installRuby" m:refclass="s:TaskDefinition">
+  <refentry m:refclass="s:TaskDefinition" xml:id="r.openshift.installRuby">
     <!-- not so much a tool definition as much as a task definition -->
+
     <refnamediv>
       <refname>Install &ps.ruby; and
       <productname>RubyGems</productname></refname>
+
       <refpurpose>Program Tools Installation</refpurpose>
+
       <refclass>Task Definition</refclass>
     </refnamediv>
+
     <refsect1>
       <title>Summary</title>
 
-      <para>The exact installation process for
-      &ps.ruby; naturally will vary by host
-      machine platform</para>
+      <para>The exact installation process for &ps.ruby; naturally will vary
+      by host machine platform</para>
 
-      <para>
-	Once &ps.ruby; is installed, it may be
-	recommended to use a package management system unique to
-	&ps.ruby;, such as <productname
-	xlink:href="https://rvm.io/rvm">RVM</productname> or
-	<productname
-	    xlink:href="https://github.com/sstephenson/rbenv"
-	    >rbenv</productname>.
-      </para>
-
+      <para>Once &ps.ruby; is installed, it may be recommended to use a
+      package management system unique to &ps.ruby;, such as <productname
+      xlink:href="https://rvm.io/rvm">RVM</productname> or <productname
+      xlink:href="https://github.com/sstephenson/rbenv">rbenv</productname>.</para>
 
       <refsect2>
 	<title>Installing &ps.ruby; on &ps.linux; Platforms</title>
 
-	<para>
-	  The process for installing &ps.ruby; on the &ps.linux;
-	  platform will depend on the nature of the &ps.linux;
-	  <glossterm>distribution</glossterm> in use on the
-	  <glossterm>host</glossterm>
-	  <glossterm>machine</glossterm>. Typically, a
-	  &ps.linux; <glossterm>distribution</glossterm> will feature
-	  an integrated <glossterm>package manager</glossterm>, and a
-	  <glossterm>graphical user interface</glossterm> for
-	  accessing that <glossterm>package manager</glossterm>,
-	  whether via a <glossterm>command line</glossterm>
-	  <glossterm>terminal</glossterm> or alternately,
-	  a graphical <glossterm>desktop</glossterm>  interface.
-	</para>
+	<para>The process for installing &ps.ruby; on the &ps.linux; platform
+	will depend on the nature of the &ps.linux;
+	<glossterm>distribution</glossterm> in use on the
+	<glossterm>host</glossterm> <glossterm>machine</glossterm>. Typically,
+	a &ps.linux; <glossterm>distribution</glossterm> will feature an
+	integrated <glossterm>package manager</glossterm>, and a
+	<glossterm>graphical user interface</glossterm> for accessing that
+	<glossterm>package manager</glossterm>, whether via a
+	<glossterm>command line</glossterm> <glossterm>terminal</glossterm> or
+	alternately, a graphical <glossterm>desktop</glossterm>
+	interface.</para>
 
 	<refsect3>
-	  <title>&ps.debian;: Packages for &ps.ruby; Platform
-	  Component Installation</title>
+	  <title>&ps.debian;: Packages for &ps.ruby; Platform Component
+	  Installation</title>
 
-	  <para>
-	    A <glossterm>virtual package</glossterm>
-	    named <symbol>ruby-interpreter</symbol> is available
-	    on &ps.debian; &ps.linux;. The
-	    <symbol>ruby-interpreter</symbol> <glossterm>virtual
-	    package</glossterm> is <glossterm>provided</glossterm> by
-	    any version-named package in the <glossterm>package
-	    repository</glossterm>providing a &ps.ruby;
-	    <glossterm>interpreter</glossterm>. Alternately, a
-	    <glossterm>virtual package</glossterm> is available, named
-	    <symbol>ruby-full</symbol>, such that effectively
-	    depends on a broader set of packages for the
-	    &ps.ruby; platform.
-	  </para>
+	  <para>A <glossterm>virtual package</glossterm> named
+	  <symbol>ruby-interpreter</symbol> is available on &ps.debian;
+	  &ps.linux;. The <symbol>ruby-interpreter</symbol> <glossterm>virtual
+	  package</glossterm> is <glossterm>provided</glossterm> by any
+	  version-named package in the <glossterm>package
+	  repository</glossterm>providing a &ps.ruby;
+	  <glossterm>interpreter</glossterm>. Alternately, a
+	  <glossterm>virtual package</glossterm> is available, named
+	  <symbol>ruby-full</symbol>, such that effectively depends on a
+	  broader set of packages for the &ps.ruby; platform.</para>
 
-	  <para>
-	    Additionally, the <symbol>rubygems</symbol> package should
-	    be installed &mdash; optionally along with
-	    <symbol>rubygems-doc</symbol> &mdash; as to be able to
-	    install the  <symbol>rhc</symbol> gem for &ps.ruby;, via
-	    the <command>gem</command> command. Note, however, that
-	    the <symbol>rubygems</symbol> package may depend on a
-	    specific version of &ps.ruby;, such that may be older than
-	    the most recently released version. There is also the
-	    <symbol>ruby-switch</symbol> package, for developing on
-	    mutliple versions of the &ps.ruby; interpreter.
-	  </para>
+	  <para>Additionally, the <symbol>rubygems</symbol> package should be
+	  installed — optionally along with <symbol>rubygems-doc</symbol> — as
+	  to be able to install the <symbol>rhc</symbol> gem for &ps.ruby;,
+	  via the <command>gem</command> command. Note, however, that the
+	  <symbol>rubygems</symbol> package may depend on a specific version
+	  of &ps.ruby;, such that may be older than the most recently released
+	  version. There is also the <symbol>ruby-switch</symbol> package, for
+	  developing on mutliple versions of the &ps.ruby; interpreter.</para>
 
-	  <para>
-	    Lastly, the package,
-	    <glossterm>rubygems-integration</glossterm> would be
-	    recommended, as in order to ensure that &ps.debian;
-	    packaged &ps.ruby; components, when installed,
-	    will be visible to <productname>RubyGems</productname>.
-	  </para>
+	  <para>Lastly, the package,
+	  <glossterm>rubygems-integration</glossterm> would be recommended, as
+	  in order to ensure that &ps.debian; packaged &ps.ruby; components,
+	  when installed, will be visible to
+	  <productname>RubyGems</productname>.</para>
 
 	  <programlisting>sudo aptitude install rubygems rubygems-doc \
 	  rubygems-integration ruby-switch</programlisting>
-
 	</refsect3>
       </refsect2>
 
       <refsect2>
 	<title>Installing &ps.ruby; on &ps.osx; Platforms</title>
 
-	<para>
-	  If &ps.ruby; is not available on the &ps.osx;
-	  <glossterm>machine</glossterm>, it may be installed via
-	  <productname xlink:href="https://developer.apple.com/xcode/"
-		       >Xcode</productname>.
-	</para>
+	<para>If &ps.ruby; is not available on the &ps.osx;
+	<glossterm>machine</glossterm>, it may be installed via <productname
+	xlink:href="https://developer.apple.com/xcode/">Xcode</productname>.</para>
       </refsect2>
 
       <refsect2>
 	<title>Installing &ps.ruby; on &ps.mswin; Platforms</title>
 
-	<para>
-	  Refer to <productname
-	  xlink:href="http://rubyinstaller.org/"
-	  >RubyInstaller</productname>
-	  for <productname>Windows</productname><citation><xref
-	  linkend="b.installRuby.dlRuby"/></citation>. (Note that
-	  <productname>RubyGems</productname> is distributed within
-	  <productname>RubyInstaller</productname><citation><xref
-	  linkend="b.installRuby.ari"/></citation>)
-	</para>
+	<para>Refer to <productname
+	xlink:href="http://rubyinstaller.org/">RubyInstaller</productname> for
+	<productname>Windows</productname><citation>
+	    <xref linkend="b.installRuby.dlRuby"/>
+	  </citation>. (Note that <productname>RubyGems</productname> is
+	distributed within <productname>RubyInstaller</productname><citation>
+	    <xref linkend="b.installRuby.ari"/>
+	  </citation>)</para>
       </refsect2>
     </refsect1>
 
     <refsect1>
       <title>Works Referenced</title>
+
       <bibliolist>
+	<biblioentry xreflabel="DLRuby" xml:id="b.installRuby.dlRuby">
+	  <citetitle>
+	    <link
+	    xlink:href="https://www.ruby-lang.org/en/downloads/">Download
+	    Ruby</link>
+	  </citetitle>
 
-	<biblioentry xml:id="b.installRuby.dlRuby" xreflabel="DLRuby">
-	  <citetitle
-	      ><link xlink:href="https://www.ruby-lang.org/en/downloads/"
-		     >Download Ruby</link></citetitle>
-	  <publisher><publishername
-			 ><link xlink:href="http://www.ruby-lang.org/"
-				>Ruby Community</link></publishername></publisher>
+	  <publisher>
+	    <publishername>
+	      <link xlink:href="http://www.ruby-lang.org/">Ruby
+	      Community</link>
+	    </publishername>
+	  </publisher>
+
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
 
-	<biblioentry xml:id="b.installRuby.ari" xreflabel="ARI">
-	  <citetitle
-	      ><link xlink:href="http://rubyinstaller.org/about"
-		     >About RubyInstaller</link></citetitle>
-	  <publisher><publishername
-			 >RubyInstaller Contributors</publishername></publisher>
+	<biblioentry xreflabel="ARI" xml:id="b.installRuby.ari">
+	  <citetitle>
+	    <link xlink:href="http://rubyinstaller.org/about">About
+	    RubyInstaller</link>
+	  </citetitle>
+
+	  <publisher>
+	    <publishername>RubyInstaller Contributors</publishername>
+	  </publisher>
+
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
 
-	<biblioentry xml:id="b.installRuby.ctig" xreflabel="CTIG">
-	  <citetitle
-	      ><link
-		   xlink:href="https://access.redhat.com/site/documentation/en-US/OpenShift_Online/2.0/html/Client_Tools_Installation_Guide/index.html"
-		   >Client Tools Installation Guide</link></citetitle>
-	  <publisher><publishername
-			 ><link xlink:href="https://access.redhat.com/"
-				>Red Hat Customer Portal</link></publishername></publisher>
+	<biblioentry xreflabel="CTIG" xml:id="b.installRuby.ctig">
+	  <citetitle>
+	    <link
+	    xlink:href="https://access.redhat.com/site/documentation/en-US/OpenShift_Online/2.0/html/Client_Tools_Installation_Guide/index.html">Client
+	    Tools Installation Guide</link>
+	  </citetitle>
+
+	  <publisher>
+	    <publishername>
+	      <link xlink:href="https://access.redhat.com/">Red Hat Customer
+	      Portal</link>
+	    </publishername>
+	  </publisher>
+
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
 
-	<biblioentry xml:id="b.installRuby.iorct" xreflabel="IORCT">
-	  <citetitle
-	      ><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-		     >Installing OpenShift RHC Client Tools</link></citetitle>
+	<biblioentry xreflabel="IORCT" xml:id="b.installRuby.iorct">
+	  <citetitle>
+	    <link
+	    xlink:href="https://www.openshift.com/developers/rhc-client-tools-install">Installing
+	    OpenShift RHC Client Tools</link>
+	  </citetitle>
 
-	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
+	  <publisher>
+	    <publishername>Red Hat, Inc</publishername>
+	  </publisher>
+
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
       </bibliolist>
     </refsect1>
   </refentry>
 
-
-  <refentry xml:id="r.installGit" m:refclass="s:TaskDefinition">
+  <refentry m:refclass="s:TaskDefinition" xml:id="r.openshift.installGit">
     <refnamediv>
       <refname>Install &ps.git;</refname>
+
       <refpurpose><acronym>SCCM</acronym> Tool Installation</refpurpose>
+
       <refclass>Task Definition</refclass>
     </refnamediv>
+
     <refsect1>
       <title>Summary</title>
 
       <refsect2>
 	<title>Installing &ps.git; on &ps.linux; Platforms</title>
+
 	<refsect3>
 	  <title>On &ps.debian;</title>
 
 	  <programlisting>aptitude install git</programlisting>
-
 	</refsect3>
       </refsect2>
 
       <refsect2>
 	<title>Installing &ps.git; on &ps.osx; Platforms</title>
-	<para>
-	  cf. <productname
-	  xlink:href="https://code.google.com/p/git-osx-installer/"
-	  >Git for OS X</productname></para>
+
+	<para>cf. <productname
+	xlink:href="https://code.google.com/p/git-osx-installer/">Git for OS
+	X</productname></para>
       </refsect2>
 
       <refsect2>
 	<title>Installing &ps.git; on &ps.mswin; Platforms</title>
-	<para>cf.
-	<productname
-	    xlink:href="https://code.google.com/p/tortoisegit/"
-	    >TortoiseGit</productname>
-	</para>
-      </refsect2>
 
+	<para>cf. <productname
+	xlink:href="https://code.google.com/p/tortoisegit/">TortoiseGit</productname></para>
+      </refsect2>
     </refsect1>
 
     <refsect1>
       <title>Works Referenced</title>
+
       <bibliolist>
+	<biblioentry xreflabel="IORCT" xml:id="b.installGit.iorct">
+	  <citetitle>
+	    <link
+	    xlink:href="https://www.openshift.com/developers/rhc-client-tools-install">Installing
+	    OpenShift RHC Client Tools</link>
+	  </citetitle>
 
-	<biblioentry xml:id="b.installGit.iorct" xreflabel="IORCT">
-	  <citetitle
-	      ><link xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
-		     >Installing OpenShift RHC Client Tools</link></citetitle>
+	  <publisher>
+	    <publishername>Red Hat, Inc</publishername>
+	  </publisher>
 
-	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
 	</biblioentry>
 
-	<biblioentry xml:id="b.installGit.gd" xreflabel="GITDOCS">
-	  <citetitle><link xlink:href="http://git-scm.com/doc"
-			   >Git Documentation</link></citetitle>
-	  <publisher><publishername>Software Freedom Conservancy</publishername></publisher>
+	<biblioentry xreflabel="GITDOCS" xml:id="b.installGit.gd">
+	  <citetitle>
+	    <link xlink:href="http://git-scm.com/doc">Git Documentation</link>
+	  </citetitle>
+
+	  <publisher>
+	    <publishername>Software Freedom Conservancy</publishername>
+	  </publisher>
+
 	  <bibliomisc>accessed 9 October, 2013</bibliomisc>
 	</biblioentry>
       </bibliolist>
     </refsect1>
   </refentry>
-
-
 </reference>
