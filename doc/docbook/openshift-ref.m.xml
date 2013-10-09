@@ -287,12 +287,6 @@ TO DO:
 	  <glossterm>machine</glossterm>, it may be installed via
 	  <productname xlink:href="https://developer.apple.com/xcode/"
 		       >Xcode</productname>.
-	  Alternately,
-	  the <productname
-	  xlink:href="http://mxcl.github.com/homebrew/"
-	  >Homebrew</productname> package manager
-	  can be used to install &ps.ruby; on
-	  <productname>OS X</productname> platforms.
 	</para>
       </refsect2>
 
