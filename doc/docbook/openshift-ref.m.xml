@@ -40,15 +40,15 @@ TO DO:
 
   <refentry xml:id="r.openShiftAccount" m:refclass="s:WorkProductDefinition">
     <refnamediv>
-      <refname><productname>OpenShift</productname> Account</refname>
+      <refname>&ps.openshift; Account</refname>
       <refpurpose></refpurpose>
       <refclass>Work Product Definition</refclass>
     </refnamediv>
   </refentry>
 
-  <refentry xml:id="r.openShiftClientToolsInstall" m:refclass="s:TaskDefinition">
+  <refentry xml:id="r.installRhc" m:refclass="s:TaskDefinition">
     <refnamediv>
-      <refname>Install <productname>OpenShift</productname> Online Cient
+      <refname>Install &ps.openshift; Online Client
       Tools</refname>
       <refpurpose>Developer Task</refpurpose>
       <refclass>Task Definition</refclass>
@@ -57,13 +57,89 @@ TO DO:
       <!--     <m:attribute name="s:usedTool" xref="r.rhc"/> -->
       <!--   <m:attribute name="s:requiredQualification" xref="r.techDocAuthor"/> -->
     </refnamediv>
+    <refsect1>
+      <title>Summary</title>
+      <refsect2>
+	<title>Prerequisites</title>
+	<itemizedlist>
+	  <listitem>
+	    <para>Sign up for an &ps.openshift;
+	    account<footnote>
+	    <para>Note that there are a number of approaches available
+	    from &ps.openshift;, for signing up
+	    for an &ps.openshift; account:</para>
+	    <itemizedlist>
+	      <listitem>
+		<para><productname
+			  xlink:href="https://www.openshift.com/products/online"
+			  >OpenShift Online</productname></para>
+	      </listitem>
+	      <listitem>
+		<para><productname
+			  xlink:href="https://www.openshift.com/products/online"
+			  >OpenShift Enterprise PaaS</productname>,
+		for <orgname>Red Hat</orgname> professional support in
+		integration of &ps.openshift;
+		with existing <acronym>IT</acronym>
+		enterprise systems.<citation><xref linkend="b.installRhc.bwire2013"/></citation></para>
+	      </listitem>
+	      <listitem>
+		<para><productname
+			  xlink:href="https://www.openshift.com/products/origin"
+			  >OpenShift Origin</productname>, for private
+		hosting of the &ps.openshift; platform</para>
+	      </listitem>
+	    </itemizedlist>
+	    </footnote></para>
+	  </listitem>
+	  <listitem>
+	    <para><xref linkend="r.installRuby"/></para>
+	  </listitem>
+	  <listitem>
+	    <para><xref linkend="r.installGit"/></para>
+	  </listitem>
+	</itemizedlist>
+      </refsect2>
+      <refsect2>
+	<title>Procedure</title>
+
+	<programlisting
+	    >gem install rhc &amp;&amp;
+	rhc setup</programlisting>
+
+      </refsect2>
+    </refsect1>
+    <refsect1>
+      <title>Works Referenced</title>
+      <bibliolist>
+
+	<biblioentry xml:id="b.installRhc.iorct" xreflabel="IORCT">
+	  <citetitle
+	      xlink:href="https://www.openshift.com/developers/rhc-client-tools-install"
+	      >Installing OpenShift RHC Client Tools</citetitle>
+
+	  <publisher><publishername>Red Hat, Inc</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xml:id="b.installRhc.bwire2013" xreflabel="BWIRE2013">
+	  <citetitle
+	      xlink:href="http://virtualization.ulitzer.com/node/2731415"
+	      >Red Hat Advances OpenShift Enterprise with New Release</citetitle>
+
+	  <publisher><publishername>Business Wire</publishername></publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+
+      </bibliolist>
+    </refsect1>
   </refentry>
 
 
   <refentry xml:id="r.installRuby" m:refclass="s:TaskDefinition">
     <!-- not so much a tool definition as much as a task definition -->
     <refnamediv>
-      <refname>Install <productname>Ruby</productname> and
+      <refname>Install &ps.ruby; and
       <productname>RubyGems</productname></refname>
       <refpurpose></refpurpose>
       <refclass>Task Definition</refclass>
@@ -72,13 +148,13 @@ TO DO:
       <title>Summary</title>
 
       <para>The exact installation process for
-      <productname>Ruby</productname> naturally will vary by host
+      &ps.ruby; naturally will vary by host
       machine platform</para>
 
       <para>
-	Once <productname>Ruby</productname> is installed, it may be
+	Once &ps.ruby; is installed, it may be
 	recommended to use a package management system unique to
-	<productname>Ruby</productname>, such as <productname
+	&ps.ruby;, such as <productname
 	  xlink:href="https://rvm.io/rvm">RVM</productname> or
 	<productname
 	    xlink:href="https://github.com/sstephenson/rbenv"
@@ -87,21 +163,16 @@ TO DO:
 
 
       <refsect2>
-	<title>Installing <productname>Ruby</productname> on
-	<productname>Linux</productname> Platforms</title>
+	<title>Installing &ps.ruby; on &ps.linux; Platforms</title>
 
 	<para>
-	  The process for installing
-	  <productname>Ruby</productname> on the
-	  <productname>Linux</productname>
-	  platform will depend on the nature of the
-	  <productname>Linux</productname>
+	  The process for installing &ps.ruby; on the &ps.linux;
+	  platform will depend on the nature of the &ps.linux;
 	  <glossterm>distribution</glossterm> in use on the
 	  <glossterm>host</glossterm>
 	  <glossterm>machine</glossterm>. Typically, a
-	  <productname>Linux</productname>
-	  <glossterm>distribution</glossterm> will feature an
-	  integrated <glossterm>package manager</glossterm>, and a
+	  &ps.linux; <glossterm>distribution</glossterm> will feature
+	  an integrated <glossterm>package manager</glossterm>, and a
 	  <glossterm>graphical user interface</glossterm> for
 	  accessing that <glossterm>package manager</glossterm>,
 	  whether via a <glossterm>command line</glossterm>
@@ -110,50 +181,42 @@ TO DO:
 	</para>
 
 	<refsect3>
-	  <title><productname>Debian</productname>:
-	  Packages for <productname>Ruby</productname>
-	  Platform Component Installation</title>
+	  <title>&ps.debian;: Packages for &ps.ruby; Platform
+	  Component Installation</title>
 
 	  <para>
 	    A <glossterm>virtual package</glossterm>
 	    named <symbol>ruby-interpreter</symbol> is available
-	    on <productname>Debian</productname>
-	    <productname>Linux</productname>. The
+	    on &ps.debian; &ps.linux;. The
 	    <symbol>ruby-interpreter</symbol> <glossterm>virtual
-	    package</glossterm>
-	    is <glossterm>provided</glossterm> by any
-	    version-named package in the <glossterm>package
-	    repository</glossterm>providing a
-	    <productname>Ruby</productname>
-	    <glossterm>interpreter</glossterm>.
-	    Alternately, a
+	    package</glossterm> is <glossterm>provided</glossterm> by
+	    any version-named package in the <glossterm>package
+	    repository</glossterm>providing a &ps.ruby;
+	    <glossterm>interpreter</glossterm>. Alternately, a
 	    <glossterm>virtual package</glossterm> is available, named
 	    <symbol>ruby-full</symbol>, such that effectively
 	    depends on a broader set of packages for the
-	    <productname>Ruby</productname> platform.
+	    &ps.ruby; platform.
 	  </para>
 
 	  <para>
-	    Additionally, the <symbol>rubygems</symbol> package
-	    should be installed &mdash; optionally along with
-	    <symbol>rubygems-doc</symbol> &mdash;  as to be able to
-	    install the <symbol>rhc</symbol> gem for
-	    <productname>Ruby</productname>, via the
-	    <command>gem</command> command. Note, however, that the
-	    <symbol>rubygems</symbol> package may depend on a specific
-	    version of <productname>Ruby</productname>, such that may be
-	    older than the most recently released version. There is also
-	    the <symbol>ruby-switch</symbol> package, for developing on
-	    mutliple versions of the <productname>Ruby</productname>
-	    interpreter.
+	    Additionally, the <symbol>rubygems</symbol> package should
+	    be installed &mdash; optionally along with
+	    <symbol>rubygems-doc</symbol> &mdash; as to be able to
+	    install the  <symbol>rhc</symbol> gem for &ps.ruby;, via
+	    the <command>gem</command> command. Note, however, that
+	    the <symbol>rubygems</symbol> package may depend on a
+	    specific version of &ps.ruby;, such that may be older than
+	    the most recently released version. There is also the
+	    <symbol>ruby-switch</symbol> package, for developing on
+	    mutliple versions of the &ps.ruby; interpreter.
 	  </para>
 
 	  <para>
 	    Lastly, the package,
 	    <glossterm>rubygems-integration</glossterm> would be
-	    recommended, as in order to ensure that
-	    <productname>Debian</productname> packaged
-	    <productname>Ruby</productname> components, when installed,
+	    recommended, as in order to ensure that &ps.debian;
+	    packaged &ps.ruby; components, when installed,
 	    will be visible to <productname>RubyGems</productname>.
 	  </para>
 
@@ -164,12 +227,10 @@ TO DO:
       </refsect2>
 
       <refsect2>
-	<title>Installing <productname>Ruby</productname> on
-	<productname>Apple OS X</productname> Platforms</title>
+	<title>Installing &ps.ruby; on &ps.osx; Platforms</title>
 
 	<para>
-	  If <productname>Ruby</productname> is not available on the
-	  <productname>OS X</productname>
+	  If &ps.ruby; is not available on the &ps.osx;
 	  <glossterm>machine</glossterm>, it may be installed via
 	  <productname xlink:href="https://developer.apple.com/xcode/"
 		       >Xcode</productname>.
@@ -177,15 +238,13 @@ TO DO:
 	  the <productname
 	  xlink:href="http://mxcl.github.com/homebrew/"
 	  >Homebrew</productname> package manager
-	  can be used to install <productname>Ruby</productname> on
+	  can be used to install &ps.ruby; on
 	  <productname>OS X</productname> platforms.
 	</para>
       </refsect2>
 
 	<refsect2>
-	  <title>Installing <productname>Ruby</productname> on
-	  <productname>Microsoft Windows</productname>
-	  Platforms</title>
+	  <title>Installing &ps.ruby; on &ps.mswin; Platforms</title>
 
 	  <para>
 	    Refer to <productname
@@ -245,8 +304,7 @@ TO DO:
 
   <refentry xml:id="r.openShiftClientToolsInstall" m:refclass="s:TaskDefinition">
     <refnamediv>
-      <refname>Install <productname>OpenShift</productname> Online Cient
-      Tools</refname>
+      <refname>Install &ps.openshift; Online Cient Tools</refname>
       <refpurpose>Developer Task</refpurpose>
       <refclass>Task Definition</refclass>
       <!-- pevious: r.installRuby, r.installGit -->
@@ -259,7 +317,7 @@ TO DO:
 
   <refentry xml:id="r.installGit" m:refclass="s:TaskDefinition">
     <refnamediv>
-      <refname>Install <productname>Git</productname></refname>
+      <refname>Install &ps.git;</refname>
       <refpurpose></refpurpose>
       <refclass>Task Definition</refclass>
     </refnamediv>
@@ -267,10 +325,9 @@ TO DO:
       <title>Summary</title>
 
       <refsect2>
-	<title>Installing <productname>Git</productname> on
-	<productname>Linux</productname> Platforms</title>
+	<title>Installing &ps.git; on &ps.linux; Platforms</title>
 	<refsect3>
-	  <title>On <productname>Debian</productname></title>
+	  <title>On &ps.debian;</title>
 
 	  <programlisting>aptitude install git</programlisting>
 
@@ -278,8 +335,7 @@ TO DO:
       </refsect2>
 
       <refsect2>
-	<title>Installing <productname>Git</productname> on
-	<productname>Apple OS X</productname> Platforms</title>
+	<title>Installing &ps.git; on &ps.osx; Platforms</title>
 	<para>
 	  cf. <productname
 	  xlink:href="https://code.google.com/p/git-osx-installer/"
@@ -287,9 +343,7 @@ TO DO:
       </refsect2>
 
       <refsect2>
-	<title>Installing <productname>Git</productname> on
-	<productname>Microsoft Windows</productname>
-	Platforms</title>
+	<title>Installing &ps.git; on &ps.mswin; Platforms</title>
 	<para>cf.
 	<productname
 	    xlink:href="https://code.google.com/p/tortoisegit/"
@@ -313,7 +367,7 @@ TO DO:
 	  </biblioentry>
 	</bibliolist>
       </refsect1>
-    </refentry>
+  </refentry>
 
 
-  </reference>
+</reference>

@@ -5,3 +5,33 @@
 <!ENTITY p.id
 	'gha'
 >
+
+<!-- products and services -->
+
+<!ENTITY ps.openshift
+	'<productname>OpenShift</productname>'
+>
+
+<!ENTITY ps.ruby
+	'<productname>Ruby</productname>'
+>
+
+<!ENTITY ps.mswin
+	'<productname>Microsoft Windows</productname>'
+>
+
+<!ENTITY ps.git
+	'<productname>Git</productname>'
+>
+
+<!ENTITY ps.osx
+	'<productname>Apple OS X</productname>'
+>
+
+<!ENTITY ps.debian
+	'<productname>Debian</productname>'
+>
+
+<!ENTITY ps.linux
+	'<productname>Linux</productname>'
+>
