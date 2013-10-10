@@ -271,12 +271,13 @@ TO DO:
 
 	<biblioentry xreflabel="OSFAQ" xml:id="b.openShiftAccount.osfaq">
 	  <citetitle>
-	    <link xlink:href="https://www.openshift.com/faq">Frequently Asked
-	    Questions</link>
+	    <link
+		xlink:href="https://www.openshift.com/faq"
+		>OpenShift: Frequently Asked Questions</link>
 	  </citetitle>
 
 	  <publisher>
-	    <publishername>OpenShift by Red Hat</publishername>
+	    <publishername>Red Hat, Inc.</publishername>
 	  </publisher>
 
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -288,7 +289,7 @@ TO DO:
 	  </citetitle>
 
 	  <publisher>
-	    <publishername>Red Hat</publishername>
+	    <publishername>Red Hat, Inc.</publishername>
 	  </publisher>
 
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -386,7 +387,7 @@ TO DO:
 	  </citetitle>
 
 	  <publisher>
-	    <publishername>Red Hat, Inc</publishername>
+	    <publishername>Red Hat, Inc.</publishername>
 	  </publisher>
 
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -549,7 +550,7 @@ TO DO:
 	  </citetitle>
 
 	  <publisher>
-	    <publishername>Red Hat, Inc</publishername>
+	    <publishername>Red Hat, Inc.</publishername>
 	  </publisher>
 
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -608,7 +609,7 @@ TO DO:
 	  </citetitle>
 
 	  <publisher>
-	    <publishername>Red Hat, Inc</publishername>
+	    <publishername>Red Hat, Inc.</publishername>
 	  </publisher>
 
 	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
@@ -625,6 +626,8 @@ TO DO:
 
 	  <bibliomisc>accessed 9 October, 2013</bibliomisc>
 	</biblioentry>
+
+
       </bibliolist>
     </refsect1>
   </refentry>
@@ -634,7 +637,8 @@ TO DO:
     <refnamediv>
       <refname>&ps.osOrigin; &ps.vbox; Virtual Machine Image</refname>
 
-      <refpurpose></refpurpose>
+      <refpurpose>&ps.vbox; Virtual Machine Image providing
+      &ps.osOrigin; Host Services</refpurpose>
 
       <refclass>Work Product Definition</refclass>
     </refnamediv>
@@ -645,8 +649,71 @@ TO DO:
       <refsect2>
 	<title>Availability</title>
 
-	<para>This manual will focus on the &ps.vbox; image available
-	<glossterm>upstream</glossterm> from &ps.osOrigin;
+	<para>&ps.osOrigin; provides an <glossterm>archive</glossterm>
+	containing a number of files suitable for creation of
+	&ps.osOrigin; <glossterm>virtual machine</glossterm>
+	instances. The <glossterm>archive</glossterm> may be
+	downloaded from a local &ps.osOrigin;
+	<glossterm>mirror</glossterm> site
+	<xref linkend="b.openshift.osm"/><xref
+	linkend="b.openshift.os-server"/> or
+	<link
+	    xlink:href="https://mirror.openshift.com/pub/origin-server/release/2/images/openshift-origin.zip"
+	    >directly from <systemitem
+	    class="domainname"
+	    >mirrors.openshift.com</systemitem></link></para>
+
+	<para>Using <command>wget</command><footnote>
+	<para>Some versions of <command>wget</command> may present an
+	error when provided with an <systemitem>https</systemitem>
+	<acronym>URL</acronym><citation><xref
+	linkend="b.openshift.d707555"/></citation>. In those
+	instances, it may be advisable to use a
+	<glossterm>desktop</glossterm> <glossterm>download
+	manager</glossterm>, such as
+	<command>kget</command></para>
+      </footnote></para>
+
+	<programlisting>wget --continue --progress=dot \
+  https://mirror.openshift.com/pub/origin-server/release/2/images/openshift-origin.zip</programlisting>
+
+
+	<segmentedlist>
+	  <title>&ps.osOrigin; Image Archive Contents</title>
+	  <segtitle>file</segtitle>
+	  <segtitle>format</segtitle>
+	  <segtitle>references</segtitle>
+	  <seglistitem>
+	    <seg><filename>openshift-origin.vmdk</filename></seg>
+	    <seg>Virtual Machine Disk File></seg>
+	    <seg><xref linkend="b.openshift.vboxst"/>,
+	    <xref linkend="b.openshift.vmf"/></seg>
+	  </seglistitem>
+	  <seglistitem>
+	    <seg><filename>openshift-origin.vmx</filename></seg>
+	    <seg><productname>VMware</productname> Configuration File</seg>
+	    <seg><xref linkend="b.openshift.vmf"/></seg>
+	  </seglistitem>
+	  <seglistitem>
+	    <seg><filename>openshift-origin.ovf</filename></seg>
+	    <seg><productname>Open Virtualization Format</productname></seg>
+	    <seg><xref linkend="b.openshift.wpovf"/>, <xref
+	    linkend="b.openshift.vmf"/></seg>
+	  </seglistitem>
+	  <seglistitem>
+	    <seg><filename>openshift-origin.tdl</filename></seg>
+	    <seg><productname>Template Definition Language</productname></seg>
+	    <seg><xref linkend="b.openshift.vbtdl"/>, <xref
+	    linkend="b.openshift.vmf"/></seg>
+	  </seglistitem>
+	</segmentedlist>
+
+
+	<para>This manual will focus primarily on the
+	<acronym>VMDK</acronym> file provided in that
+	<glossterm>archive</glossterm>. The <acronym>VMDK</acronym>
+	file can be loaded as a <glossterm>disk image</glossterm> in
+	a &vbox; <glossterm>virtual machine</glossterm>
 	  <footnote>
 	    <para>Alternately, &ps.openshift; provides instructions
 	    for installing &ps.osOrigin; within a
@@ -680,10 +747,10 @@ TO DO:
 	  </citetitle>
 
 	  <publisher>
-	    <publishername>Red Hat, Inc</publishername>
+	    <publishername>Red Hat, Inc.</publishername>
 	  </publisher>
 
-	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
 	</biblioentry>
 
 	<biblioentry xreflabel="VBOXNET" xml:id="b.openshift.vboxnet">
@@ -701,7 +768,92 @@ TO DO:
 	  </publisher>
 	</biblioentry>
 
+	<biblioentry xreflabel="VBOXST" xml:id="b.openshift.vboxst">
+	  <citetitle
+	      ><link
+		   xlink:href="http://www.virtualbox.org/manual/ch05.html"
+		   >Chapter 5. Virtual Storage</link></citetitle>
+	  <citetitle xreflabel="VBOXUM"
+	    ><link
+		 xlink:href="http://www.virtualbox.org/manual/"
+		 >Oracle VM &ps.vbox; User Manual</link></citetitle>
+	  <pubdate>2013</pubdate>
+	  <publisher>
+	    <publishername>Oracle Corporation</publishername>
+	  </publisher>
+	</biblioentry>
+
+	<biblioentry xreflabel="VMPROV" xml:id="b.openshift.vmprov">
+	  <citetitle
+	      ><link
+		   xlink:href="http://pubs.vmware.com/vsphere-4-esx-vcenter/topic/com.vmware.vsphere.vmadmin.doc_41/vsp_vm_guide/c_provisioning_virtual_machines.html"
+		   >Provisioning Virtual Machines</link></citetitle>
+	  <publisher><publishername>VMware, Inc.</publishername></publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xreflabel="WPOVF" xml:id="b.openshift.wpovf">
+	  <citetitle
+	      ><link
+		   xlink:href="http://en.wikipedia.org/wiki/Open_Virtualization_Format"
+		   >Open Virtualiation Format</link></citetitle>
+	  <publisher><publishername>Wikipedia</publishername></publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
+
+	<biblioentry xreflabel="VBTDL" xml:id="b.openshift.vbtdl">
+	  <citetitle
+	      ><link
+		   xlink:href="http://fossdev.blogspot.com/2012/11/virtcloud-creating-virtualbox-image.html"
+		   >Creating a VirtualBox image from an appliance
+	  (TDL) file</link></citetitle>
+	  <publisher><publishername>Denis Arnaud</publishername></publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xreflabel="VMF" xml:id="b.openshift.vmf">
+	  <citetitle
+	      ><link
+		   xlink:href="http://www.vmware.com/support/ws55/doc/ws_learning_files_in_a_vm.html"
+		   >What Files make Up a Virtual Machine?</link></citetitle>
+	  <publisher><publishername>VMware, Inc.</publishername></publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xreflabel="OSM" xml:id="b.openshift.osm">
+	  <citetitle
+	      ><link xlink:href="https://www.openshift.com/blogs/become-an-openshift-mirror"
+		     >Become an OpenShift Mirror</link></citetitle>
+	  <publisher>
+	    <publishername>Red Hat, Inc.</publishername>
+	  </publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xreflabel="OSSRV" xml:id="b.openshift.os-server">
+	  <citetitle
+	      ><link xlink:href="https://github.com/openshift/origin-server"
+		>openshift/origin-server (github)</link></citetitle>
+	  <publisher>
+	    <publishername>&ps.osOrigin;</publishername>
+	  </publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xreflabel="D707555" xml:id="b.openshift.d707555">
+	  <citetitle
+	      ><link
+		   xlink:href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=707555"
+		   >wget: https fails with GnuTLS</link></citetitle>
+	  <publisher>
+	    <publishername>Debian Bug report logs</publishername>
+	  </publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
       </bibliolist>
+
     </refsect1>
   </refentry>
 
@@ -860,6 +1012,7 @@ TO DO:
 	<member>Networking Services</member>
 	<member>Filesystem Resources</member>
 	<member>Input Devices</member>
+	<member><acronym>USB</acronym> Devices</member>
 	<member>Video Services</member>
 	<member>Audio Services</member>
       </simplelist>
@@ -884,6 +1037,8 @@ TO DO:
 	  </publisher>
 	</biblioentry>
 
+
+
 	<biblioentry xreflabel="DKMSDEB" xml:id="b.openshift.dkmsdeb">
 	  <citetitle
 	      ><link
@@ -892,7 +1047,7 @@ TO DO:
 	  <publisher>
 	    <publishername>Debian wiki</publishername>
 	  </publisher>
-	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
 	</biblioentry>
       </bibliolist>
     </refsect1>
