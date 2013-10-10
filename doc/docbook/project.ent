@@ -13,10 +13,24 @@
 	'gha'
 >
 
+<!-- lexical -->
+
+<!ENTITY cf
+	'<foreignphrase>cf</foreignphrase>.'
+>
+
 <!-- products and services -->
 
 <!ENTITY ps.openshift
 	'<productname>OpenShift</productname>'
+>
+
+<!ENTITY ps.osOrigin
+	'<productname>OpenShift Origin</productname>'
+>
+
+<!ENTITY ps.vbox
+	'<trademark class="registered">VirtualBox</trademark>'
 >
 
 <!ENTITY ps.ruby
@@ -41,4 +55,8 @@
 
 <!ENTITY ps.linux
 	'<productname>Linux</productname>'
+>
+
+<!ENTITY ps.solaris
+	'<productname>solaris</productname>'
 >
