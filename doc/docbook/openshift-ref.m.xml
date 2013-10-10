@@ -204,7 +204,7 @@ TO DO:
       <refclass>Tool Definition</refclass>
 
       <m:attribute name="s:managedWorkProduct"
-		   xref="r.openshift.openShiftAccount"/>
+		   linkend="r.openshift.openShiftAccount"/>
     </refnamediv>
   </refentry>
 
@@ -359,13 +359,13 @@ TO DO:
 	    <filename>$HOME/.ssh/id_rsa</filename> (private key) and
 	    <filename>$HOME/.ssh/id_rsa.pub</filename> (public key), with
 	    public key optionally uploaded to &ps.openshift; server via
-	    <productname>SSH</productname> (cf. <command>rhc
+	    <productname>SSH</productname> (&cf; <command>rhc
 	    sshkey</command>)</para>
 	  </listitem>
 
 	  <listitem>
 	    <para>Application Namespace (optional, but required for creating
-	    an &ps.openshift; application) (cf. <command>rhc
+	    an &ps.openshift; application) (&cf; <command>rhc
 	    create-domain</command>) (must be unique across all &ps.openshift;
 	    users) (will be part of each application's domain name under
 	    &ps.openshift;)</para>
@@ -583,7 +583,7 @@ TO DO:
       <refsect2>
 	<title>Installing &ps.git; on &ps.osx; Platforms</title>
 
-	<para>cf. <productname
+	<para>&cf; <productname
 	xlink:href="https://code.google.com/p/git-osx-installer/">Git for OS
 	X</productname></para>
       </refsect2>
@@ -591,7 +591,7 @@ TO DO:
       <refsect2>
 	<title>Installing &ps.git; on &ps.mswin; Platforms</title>
 
-	<para>cf. <productname
+	<para>&cf; <productname
 	xlink:href="https://code.google.com/p/tortoisegit/">TortoiseGit</productname></para>
       </refsect2>
     </refsect1>
@@ -627,5 +627,275 @@ TO DO:
 	</biblioentry>
       </bibliolist>
     </refsect1>
+  </refentry>
+
+  <refentry m:refclass="s:WorkProductDefinition"
+	    xml:id="r.openshift.osOriginImage">
+    <refnamediv>
+      <refname>&ps.osOrigin; &ps.vbox; Virtual Machine Image</refname>
+
+      <refpurpose></refpurpose>
+
+      <refclass>Work Product Definition</refclass>
+    </refnamediv>
+
+    <refsect1>
+      <title>Summary</title>
+
+      <refsect2>
+	<title>Availability</title>
+
+	<para>This manual will focus on the &ps.vbox; image available
+	<glossterm>upstream</glossterm> from &ps.osOrigin;
+	  <footnote>
+	    <para>Alternately, &ps.openshift; provides instructions
+	    for installing &ps.osOrigin; within a
+	    <productname>QEMU</productname> emulator enviornment.
+	    <citation><xref linkend="b.openshift.osodg"/></citation>
+	    </para>
+	  </footnote>
+	</para>
+
+      </refsect2>
+
+      <refsect2>
+	<title>Required Tools</title>
+	<itemizedlist>
+	  <listitem>
+	    <para><xref linkend="r.openshift.vboxHost"/></para>
+	  </listitem>
+	</itemizedlist>
+      </refsect2>
+    </refsect1>
+
+    <refsect1>
+      <title>Works Referenced</title>
+
+      <bibliolist>
+	<biblioentry xreflabel="OSODG" xml:id="b.openshift.osodg">
+	  <citetitle>
+	    <link
+	    xlink:href="http://openshift.github.io/documentation/oo_deployment_guide_vm.html"
+	    >OpenShift Origin Virtual Machine Deployment Guide</link>
+	  </citetitle>
+
+	  <publisher>
+	    <publishername>Red Hat, Inc</publishername>
+	  </publisher>
+
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+
+	<biblioentry xreflabel="VBOXNET" xml:id="b.openshift.vboxnet">
+	  <citetitle
+	      ><link
+		   xlink:href="http://www.virtualbox.org/manual/ch06.html"
+		   >Chapter 6. Virtual networking</link></citetitle>
+	  <citetitle
+	    ><link xreflabel="VBOXUM"
+		 xlink:href="http://www.virtualbox.org/manual/"
+		 >Oracle VM &ps.vbox; User Manual</link></citetitle>
+	  <pubdate>2013</pubdate>
+	  <publisher>
+	    <publishername>Oracle Corporation</publishername>
+	  </publisher>
+	</biblioentry>
+
+      </bibliolist>
+    </refsect1>
+  </refentry>
+
+  <refentry m:refclass="s:WorkProductDefinition"
+	    xml:id="r.openshift.vboxHost">
+    <refnamediv>
+      <refname>&ps.vbox; Virtual Machine Host</refname>
+
+      <refpurpose>Host Service for &ps.vbox; Virtual Machine Images</refpurpose>
+
+      <refclass>Work Product Definition</refclass>
+    </refnamediv>
+
+    <refsect1>
+      <title>Summary</title>
+
+      <refsect2>
+	<title>Overview</title>
+
+	<para>
+	  &ps.vbox; provides a framework for operating system
+	  <glossterm>vitualization</glossterm>, within &ps.linux;, &ps.osx;,
+	  &ps.solaris;, and &ps.mswin; <glossterm>host</glossterm>
+	  <glossterm>operating system</glossterm> architectures.
+	</para>
+
+	<para>
+	  A &ps.vbox; <glossterm>host</glossterm>
+	  <glossterm>service</glossterm> provides a
+	  &ps.vbox; <glossterm>virtual image</glossterm> manager for
+	  any zero or more &ps.vbox; <glossterm>guest</glossterm>
+	  system images. The &ps.vbox; <glossterm>virtual image</glossterm>
+	  manager provides features for sharing a
+	  <glossterm>host</glossterm>  platorm's filesystem, memory,
+	  video, audio, and network resources with a
+	  <glossterm>guest</glossterm> <glossterm>virtual
+	  machine</glossterm> system.
+	</para>
+      </refsect2>
+
+      <refsect2>
+	<title>Availability</title>
+
+	<para>For <glossterm>operating systems</glossterm> with an
+	available <glossterm>package manager</glossterm>, &ps.vbox;
+	may be available from a remote <glossterm>package
+	repository</glossterm> for the <glossterm>operating
+	system</glossterm>. Alternately, &ps.vbox; installers are
+	available at <systemitem
+	role="hostname">www.virtualbox.org</systemitem><footnote>
+	<para>
+	  &cf; <citetitle
+	  xlink:href="https://www.virtualbox.org/wiki/Downloads"
+	  >Downloads &mdash; Oracle VM VirtualBox</citetitle>
+	</para>
+      </footnote></para>
+
+      </refsect2>
+
+    </refsect1>
+
+    <refsect1>
+      <title>Installation Procedures</title>
+      <refsect2>
+	<title>Installing &ps.vbox; on &ps.linux; Hosts</title>
+	<refsect3>
+	  <title>Installing &ps.vbox; on &ps.debian; &ps.linux; Hosts</title>
+
+	  <segmentedlist>
+	    <segtitle>Package</segtitle>
+	    <segtitle>Usage</segtitle>
+
+	    <seglistitem>
+	      <seg><symbol>virtualbox</symbol></seg>
+	      <seg>System and service components for &ps.vbox;
+	      host-tier machines</seg>
+	    </seglistitem>
+	    <seglistitem>
+	      <seg><symbol>virtualbox-qt</symbol></seg>
+	      <seg>Host-tier graphical user interface
+	      (<acronym>GUI</acronym>)  for &ps.vbox;</seg>
+	    </seglistitem>
+	    <seglistitem>
+	      <seg><symbol>virtualbox-guest-additions-iso</symbol></seg>
+	      <seg>Host-tier CD image for &ps.vbox; guest additions</seg>
+	    </seglistitem>
+	    <seglistitem>
+	      <seg><symbol>virtualbox-dkms</symbol></seg>
+	      <seg><acronym>DKMS</acronym>-enabled source code for
+	      &ps.vbox; host-tier extensions</seg>
+	    </seglistitem>
+	    <seglistitem>
+	      <seg><symbol>virtualbox-source</symbol></seg>
+	      <seg>alternative to <symbol>virtualbox-dkms</symbol>,
+	      without <acronym>DKMS</acronym> integration</seg>
+	    </seglistitem>
+
+	  </segmentedlist>
+
+	  <para>
+	    The <symbol>virtualbox-guest</symbol>
+	    <glossterm>packages</glossterm> will not
+	    be installed on the &vbox; <glossterm>host</glossterm>
+	    <glossterm>machine</glossterm>.<footnote>
+	    <para>
+	      Those <glossterm>guest</glossterm>
+	      <glossterm>packages</glossterm> may be installed
+	      within the <glossterm>guest</glossterm>
+	      <glossterm>virtual machine</glossterm>, if the
+	      <glossterm>guest</glossterm>
+	      <glossterm>virtual machine</glossterm> is running
+	      &ps.debian; &ps.linux;. Alterntely, the
+	      <glossterm>user</glossterm> may be advised to consult
+	      the documentation specific to the <glossterm>operating
+	      system</glossterm> <glossterm>distribution</glossterm>
+	      used within the <glossterm>guest</glossterm>
+	      <glossterm>virtual machine</glossterm>
+	    </para>
+	  </footnote>
+	  </para>
+
+
+	  <programlisting
+	      >sudo aptitude install virtualbox virtualbox-qt \
+	virtualbox-guest-additions-iso \
+	virtualbox-dkms virtualbox-source</programlisting>
+
+	<para>
+	  The <glossterm>kernel module</glossterm> <glossterm>source
+	  code</glossterm> provided by the
+	  <symbol>virtualbox-dkms</symbol>
+	  <glossterm>package</glossterm> will be compiled by
+	  the <acronym>DKMS</acronym>
+	  <glossterm>subsystem</glossterm>, when the
+	  <glossterm>package</glossterm> is installed.
+	</para>
+
+	</refsect3>
+      </refsect2>
+    </refsect1>
+
+    <refsect1>
+      <title>Configuration Procedures</title>
+
+      <para>For documentation about how to configure the
+      <glossterm>host</glossterm> <glossterm>machine</glossterm>
+      and the &ps.vbox; <glossterm>resource manager</glossterm> for
+      sharing the following types of <glossterm>resource</glossterm>
+      between a &ps.vbox; <glossterm>host</glossterm>
+      <glossterm>machine</glossterm> and a
+      &ps.vbox; <glossterm>guest</glossterm> <glossterm>virtual
+      image</glossterm>, refer to <xref
+      linkend="b.openshift.vboxum"/></para>
+
+      <simplelist>
+	<member>Networking Services</member>
+	<member>Filesystem Resources</member>
+	<member>Input Devices</member>
+	<member>Video Services</member>
+	<member>Audio Services</member>
+      </simplelist>
+    </refsect1>
+
+    <refsect1>
+      <title>Works Referenced</title>
+
+      <bibliolist>
+	<biblioentry xreflabel="VBOXINST" xml:id="b.openshift.vboxinst">
+	  <citetitle
+	      ><link
+		   xlink:href="http://www.virtualbox.org/manual/ch02.html"
+		   >Chapter 2. Installation Details</link></citetitle>
+	  <citetitle xreflabel="VBOXUM" xml:id="b.opeshift.vboxum"
+	    ><link
+		 xlink:href="http://www.virtualbox.org/manual/"
+		 >Oracle VM &ps.vbox; User Manual</link></citetitle>
+	  <pubdate>2013</pubdate>
+	  <publisher>
+	    <publishername>Oracle Corporation</publishername>
+	  </publisher>
+	</biblioentry>
+
+	<biblioentry xreflabel="DKMSDEB" xml:id="b.openshift.dkmsdeb">
+	  <citetitle
+	      ><link
+		   xlink:href="https://wiki.debian.org/KernelDKMS"
+		   >Building Debian kernel modules wih DKMS</link></citetitle>
+	  <publisher>
+	    <publishername>Debian wiki</publishername>
+	  </publisher>
+	  <bibliomisc>accessed 8 October, 2013</bibliomisc>
+	</biblioentry>
+      </bibliolist>
+    </refsect1>
+
   </refentry>
 </reference>
