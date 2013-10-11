@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE reference [
+<!ENTITY % project.ent SYSTEM "project.ent">
+%project.ent;
+]>
+<reference version="ghub-docbook-1.0"
+	   xmlns="http://docbook.org/ns/docbook"
+	   mpro:s="http://www.omg.org/spec/S/20070801/S%202.0%20UML%202%20Profile.xmi"
+	   xml:id="ref.openshift"
+	   xmlns:xlink="http://www.w3.org/1999/xlink"
+	   xmlns:xi="http://www.w3.org/2001/XInclude"
+	   xmlns:ns5="http://www.w3.org/1998/Math/MathML"
+	   xmlns:ns4="http://www.w3.org/2000/svg"
+	   xmlns:ns3="http://www.w3.org/1999/xhtml"
+	   xmlns:ns="http://docbook.org/ns/docbook"
+	   xmlns:mpro="http://ghub.sourceforge.net/ns/model-profile"
+	   xmlns:m="http://ghub.sourceforge.net/ns/model">
+  <info>
+    <title>&p; Host Security Reference</title>
+    <author>
+      <personname>Sean Champ</personname>
+    </author>
+    <pubdate>9 October 2013</pubdate>
+  </info>
+
+  <partintro>
+    <info>
+      <title>Overview</title>
+    </info>
+    <table>
+      <title>Overview &mdash; Host Security</title>
+
+      <tgroup cols="4">
+	<colspec colname="col.elt"/>
+	<colspec colname="col.class" align="center"/>
+	<colspec colname="col.assoc.type" align="center"/>
+	<colspec colname="col.assoc.end"/>
+	<spanspec spanname="span.assoc"
+		  namest="col.assoc.type"
+		  nameend="col.assoc.end"/>
+
+	<thead>
+	  <row>
+	    <entry morerows="1" align="center"
+		   >Element</entry>
+	    <entry morerows="1" align="center"
+		   ><acronym>SPEM</acronym> Sterotype</entry>
+	    <entry spanname="span.assoc" align="center"
+		   >Associations</entry>
+	  </row>
+	  <row>
+	    <entry colname="col.assoc.type"
+		   align="center">Assoc. Type</entry>
+	    <entry colname="col.assoc.type"
+		   align="center">Element</entry>
+	  </row>
+	</thead>
+
+	<tbody>
+	  <row>
+	    <entry>
+	      <xref linkend="r.hostsec.nagiosSvc"/>
+	    </entry>
+	    <entry>Work Product Definition</entry>
+	    <entry>Managed By</entry>
+	    <entry>
+	      <xref
+		  linkend="r.hostsec.puppet"/>
+	    </entry>
+	  </row>
+  </partintro>
+
+  <refentry m:refclass="s:WorkProductDefinition"
+	    xml:id="r.hostsec.nagiosSvc">
+    <refnamediv>
+      <refname>Nagios Service</refname>
+      <refpurpose>Networked Component Monitoring Service</refpurpose>
+      <refclass>Work Product Definition</refclass>
+    </refnamediv>
+  </refentry>
+
+
+  <refentry m:refclass="s:WorkProductDefinition"
+	    xml:id="r.hostsec.snortSvc">
+    <refnamediv>
+      <refname>Snort Service</refname>
+      <refpurpose>Networked Intrusion Detection / Intrusion Prevention
+      Service</refpurpose>
+      <refclass>Work Product Definition</refclass>
+    </refnamediv>
+    <refsect1>
+      <title>See Also</title>
+
+      <itemizedlist>
+	<listitem>
+	  <para><xref linkend="r.hostsec.oinkmaster"/></para>
+	</listitem>
+
+	<listitem>
+	  <para><citetitle
+		    xlink:href="http://www.ntop.org/pf_ring/accelerating-snort-with-pf_ring-dna/"
+		    >Accelerating Snort with PF_RING DNA</citetitle></para>
+	</listitem>
+	<listitem>
+	  <para><citation
+		    xlink:href="https://github.com/jbagdon/snort"
+		    >Puppet install of Snort with Barnyard2,
+	  Oinkmaster, and PF_RING</citation>
+	  </para>
+	</listitem>
+
+	<listitem>
+	  <para><citetitle
+		    xlink:href="https://code.google.com/p/lutak/source/browse/?r=74b6a728e0ccdd0ee50bdda8d07a21fcdaea9460#hg%2Fsnort">snort</citetitle>
+	  from <citation xlink:href="https://code.google.com/p/lutak/"
+	  >lutak Puppet modules repository</citation></para>
+
+      </itemizedlist>
+
+    </refsect1>
+  </refentry>
+
+  <refentry m:refclass="s:ToolDefinition"
+	    xml:id="r.hostsec.oinkmaster">
+    <refnamediv>
+      <refname><command>oinkmaster</command></refname>
+      <refpurpose>Rules Updater for <productname>Snort</productname></refpurpose>
+      <refclass>Tool Definition</refclass>
+      <m:attribute name="s:managedWorkProduct"
+		   linkend="r.hostsec.snortSvc"/>
+
+    </refnamediv>
+    <refsect1>
+      <title>See Also</title>
+      <itemizedlist>
+	<listitem>
+	  <para><citation
+		    xlink:href="https://github.com/jbagdon/snort"
+		    >Puppet install of Snort with Barnyard2,
+	  Oinkmaster, and PF_RING</citation>
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </refsect1>
+  </refentry>
+
+
+  <refentry m:refclass="s:ToolDefinition"
+	    xml:id="r.hostsec.oinkmaster">
+    <refnamediv>
+      <refname><productname>Baynard2</productname></refname>
+      <refpurpose>I/O Manager for <productname>Snort</productname></refpurpose>
+      <refclass>Tool Definition</refclass>
+      <m:attribute name="s:managedWorkProduct"
+		   linkend="r.hostsec.snortSvc"/>
+
+    </refnamediv>
+
+    <refsect1>
+      <title>Summary</title>
+      <refsect2>
+	<title>Availability</title>
+
+	<para>
+	  <productname>Baynard2</productname> is avaialble in
+	  source code format <link
+	  xlink:href="https://github.com/firnsy/barnyard2/"
+	  >via GitHub</link>
+	</para>
+
+      </refsect2>
+    </refsect1>
+    <refsect1>
+      <title>See Also</title>
+      <itemizedlist>
+	<listitem>
+	  <para><citation
+		    xlink:href="https://github.com/jbagdon/snort"
+		    >Puppet install of Snort with Barnyard2,
+	  Oinkmaster, and PF_RING</citation>
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </refsect1>
+    <refsect1>
+      <title>Notes</title>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    At the time of this writing, no output plugin is
+	    defined for <productname>Nagios</productname> within
+	    <productname>Baynard2</productname>
+	    <citation><filename
+			  xlink:href="https://github.com/firnsy/barnyard2/tree/master/src/output-plugins"
+			  >output-plugins</filename></citation>
+	  </para>
+	</listitem>
+    </refsect1>
+  </refentry>
+
+
+
+  <refentry m:refclass="s:ToolDefinition"
+	    xml:id="r.hostsec.puppet">
+    <refnamediv>
+      <refname><command>puppet</command></refname>
+      <refpurpose></refpurpose>
+      <refclass>Tool Definition</refclass>
+      <m:attribute name="s:managedWorkProduct"
+		   linkend="r.hostsec.nagiosSvc"/>
+    </refnamediv>
+
+    <refsect1>
+      <title>See Also</title>
+      <itemizedlist>
+	<listitem>
+	  <para><citation
+		    xlink:href="https://github.com/jbagdon/snort"
+		    >Puppet install of Snort with Barnyard2,
+	  Oinkmaster, and PF_RING</citation>
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </refsect1>
+  </refentry>
+
+
+</reference>
