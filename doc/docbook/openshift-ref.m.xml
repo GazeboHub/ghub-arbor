@@ -346,8 +346,12 @@ TO DO:
       <refsect2>
 	<title>Procedure</title>
 
+	<example>
+	  <title>Installing <command>rhc</command> <productname>Ruby
+	  Gem</productname>, With Initial Setup</title>
 	<programlisting>gem install rhc &amp;&amp;
 	rhc setup</programlisting>
+</example>
       </refsect2>
 
       <refsect2>
@@ -356,7 +360,7 @@ TO DO:
 
 	<itemizedlist>
 	  <listitem>
-	    <para>SSH Key Pair (Optional) —
+	    <para>SSH Key Pair (Optional)
 	    <filename>$HOME/.ssh/id_rsa</filename> (private key) and
 	    <filename>$HOME/.ssh/id_rsa.pub</filename> (public key), with
 	    public key optionally uploaded to &ps.openshift; server via
@@ -464,8 +468,15 @@ TO DO:
 	  when installed, will be visible to
 	  <productname>RubyGems</productname>.</para>
 
-	  <programlisting>sudo aptitude install rubygems rubygems-doc \
+	  <example>
+	    <title>Installation of <productname>Ruby
+	    Gems</productname>, Documentation, and Supporting
+	    Packages, on &ps.debian; &ps.linux;</title>
+
+	    <programlisting>sudo aptitude install rubygems rubygems-doc \
 	  rubygems-integration ruby-switch</programlisting>
+
+	  </example>
 	</refsect3>
       </refsect2>
 
@@ -577,7 +588,12 @@ TO DO:
 	<refsect3>
 	  <title>On &ps.debian;</title>
 
-	  <programlisting>aptitude install git</programlisting>
+	  <example>
+	    <title>Installation of &ps.git; on &ps.debian;
+	    &ps.linux;</title>
+	    <programlisting>aptitude install git</programlisting>
+	  </example>
+
 	</refsect3>
       </refsect2>
 
@@ -655,8 +671,9 @@ TO DO:
 	instances. The <glossterm>archive</glossterm> may be
 	downloaded from a local &ps.osOrigin;
 	<glossterm>mirror</glossterm> site
-	<xref linkend="b.openshift.osm"/><xref
-	linkend="b.openshift.os-server"/> or
+	<citation><xref linkend="b.openshift.osm"/></citation>
+	<citation><xref
+	linkend="b.openshift.os-server"/></citation> or
 	<link
 	    xlink:href="https://mirror.openshift.com/pub/origin-server/release/2/images/openshift-origin.zip"
 	    >directly from <systemitem
@@ -674,9 +691,11 @@ TO DO:
 	<command>kget</command></para>
       </footnote></para>
 
+      <example>
+	<title>Downloading &ps.osOrigin; Image Via <command>wget</command></title>
 	<programlisting>wget --continue --progress=dot \
   https://mirror.openshift.com/pub/origin-server/release/2/images/openshift-origin.zip</programlisting>
-
+      </example>
 
 	<segmentedlist>
 	  <title>&ps.osOrigin; Image Archive Contents</title>
@@ -685,7 +704,7 @@ TO DO:
 	  <segtitle>references</segtitle>
 	  <seglistitem>
 	    <seg><filename>openshift-origin.vmdk</filename></seg>
-	    <seg>Virtual Machine Disk File></seg>
+	    <seg>Virtual Machine Disk File</seg>
 	    <seg><xref linkend="b.openshift.vboxst"/>,
 	    <xref linkend="b.openshift.vmf"/></seg>
 	  </seglistitem>
@@ -710,15 +729,15 @@ TO DO:
 
 
 	<para>This manual will focus primarily on the
-	<acronym>VMDK</acronym> file provided in that
+	<acronym>VMDK</acronym> file provided in the
 	<glossterm>archive</glossterm>. The <acronym>VMDK</acronym>
 	file can be loaded as a <glossterm>disk image</glossterm> in
-	a &vbox; <glossterm>virtual machine</glossterm>
+	a &ps.vbox; <glossterm>virtual machine</glossterm>
 	  <footnote>
 	    <para>Alternately, &ps.openshift; provides instructions
 	    for installing &ps.osOrigin; within a
 	    <productname>QEMU</productname> emulator enviornment.
-	    <citation><xref linkend="b.openshift.osodg"/></citation>
+	    <citation><xref linkend="b.openshift.osodg_1"/></citation>
 	    </para>
 	  </footnote>
 	</para>
@@ -739,7 +758,7 @@ TO DO:
       <title>Works Referenced</title>
 
       <bibliolist>
-	<biblioentry xreflabel="OSODG" xml:id="b.openshift.osodg">
+	<biblioentry xreflabel="OSODG" xml:id="b.openshift.osodg_1">
 	  <citetitle>
 	    <link
 		xlink:href="http://openshift.github.io/documentation/oo_deployment_guide_vm.html"
@@ -954,7 +973,7 @@ TO DO:
 	  <para>
 	    The <symbol>virtualbox-guest</symbol>
 	    <glossterm>packages</glossterm> will not
-	    be installed on the &vbox; <glossterm>host</glossterm>
+	    be installed on the &ps.vbox; <glossterm>host</glossterm>
 	    <glossterm>machine</glossterm>.<footnote>
 	    <para>
 	      Those <glossterm>guest</glossterm>
@@ -973,11 +992,13 @@ TO DO:
 	  </footnote>
 	  </para>
 
-
+	  <example>
+	    <title>Installing &ps.vbox; Host Packages on &ps.debian; &ps.linux;</title>
 	  <programlisting
-	      >sudo aptitude install virtualbox virtualbox-qt \
+>sudo aptitude install virtualbox virtualbox-qt \
 	virtualbox-guest-additions-iso \
 	virtualbox-dkms virtualbox-source</programlisting>
+	  </example>
 
 	<para>
 	  The <glossterm>kernel module</glossterm> <glossterm>source
@@ -989,12 +1010,46 @@ TO DO:
 	  <glossterm>package</glossterm> is installed.
 	</para>
 
+	<para>
+	  &ps.openshift; provides an illustrated walk-through of the
+	  process for creating an appropriate &ps.vbox;
+	  <glossterm>guest</glossterm>
+	  configuration and selecting the &ps.osOrigin;
+	  <acronym>VMDK</acronym> <glossterm>disk image</glossterm>
+	  for the guest's primary filesystem. A similar process can be
+	  accomplished via the command line.
+	</para>
+
+	<example>
+	  <title>Minimal Command-Line Configuration of &ps.vbox; Guest
+	  for &ps.osOrigin;</title>
+	  <programlisting
+	    >VBoxManage createvm --name "OSOrigin" --ostype Fedora_64 --register
+VBoxManage modifyvm OSOrigin --memory 2048 \
+	--nic1 bridged --bridgeadapter1 eth0
+VBoxManage storagectl OSOrigin --add ide --name IDE1 --bootable on
+VBoxManage storageattach OSOrigin --storagectl IDE1 --device 0 --port 0 \
+	--type hdd --medium path/to/openshift-origin.vmdk
+	</programlisting>
+	</example>
+
+	<para>Once the &ps.vbox; <glossterm>guest</glossterm> is
+	configured, it can be started via the visual &ps.vbox;
+	manager, or alternately via the shell, using
+	<command>vboxheadless</command></para>
+
+	<mediaobject>
+	  <imageobject><imagedata fileref="graphics/osorigin-vbox.png"/>
+	  </imageobject>
+	  <caption><para>&ps.vbox; command line interface</para></caption>
+	</mediaobject>
+
 	</refsect3>
       </refsect2>
     </refsect1>
 
     <refsect1>
-      <title>Configuration Procedures</title>
+      <title>Further Information</title>
 
       <para>For documentation about how to configure the
       <glossterm>host</glossterm> <glossterm>machine</glossterm>
@@ -1020,6 +1075,19 @@ TO DO:
       <title>Works Referenced</title>
 
       <bibliolist>
+
+	<biblioentry xreflabel="OSODG" xml:id="b.openshift.osodg_2">
+	  <citetitle>
+	    <link
+		xlink:href="http://openshift.github.io/documentation/oo_deployment_guide_vm.html"
+		>OpenShift Origin Virtual Machine Deployment Guide</link>
+	  </citetitle>
+	  <publisher>
+	    <publishername>Red Hat, Inc.</publishername>
+	  </publisher>
+	  <bibliomisc>accessed 10 October, 2013</bibliomisc>
+	</biblioentry>
+
 	<biblioentry xreflabel="VBOXINST" xml:id="b.openshift.vboxinst">
 	  <citetitle
 	      ><link
