@@ -27,7 +27,7 @@ sh genpdf-openshift-ref.sh && evince openshift-ref.m.pdf
     <author>
       <personname>Sean Champ</personname>
     </author>
-    <pubdate>9 October 2013</pubdate>
+    <pubdate>10 October 2013</pubdate>
   </info>
 
   <!--
@@ -1056,9 +1056,10 @@ VBoxManage storageattach OSOrigin --storagectl IDE1 --device 0 --port 0 \
 	<command>vboxheadless</command></para>
 
 	<mediaobject>
-	  <imageobject><imagedata fileref="graphics/osorigin-vbox.png"/>
+	  <imageobject>
+	    <imagedata fileref="graphics/osorigin-vbox.png"/>
 	  </imageobject>
-	  <caption><para>&ps.vbox; command line interface</para></caption>
+	  <caption><para>&ps.osOrigin; command line interface</para></caption>
 	</mediaobject>
 
 	</refsect3>
@@ -1110,7 +1111,7 @@ VBoxManage storageattach OSOrigin --storagectl IDE1 --device 0 --port 0 \
 	      ><link
 		   xlink:href="http://www.virtualbox.org/manual/ch02.html"
 		   >Chapter 2. Installation Details</link></citetitle>
-	  <citetitle xreflabel="VBOXUM" xml:id="b.opeshift.vboxum"
+	  <citetitle xreflabel="VBOXUM" xml:id="b.openshift.vboxum"
 	    ><link
 		 xlink:href="http://www.virtualbox.org/manual/"
 		 >Oracle VM &ps.vbox; User Manual</link></citetitle>
