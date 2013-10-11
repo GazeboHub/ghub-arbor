@@ -3,6 +3,13 @@
 <!ENTITY % project.ent SYSTEM "project.ent">
 %project.ent;
 ]>
+<!--
+
+Rudimentary document processing steps:
+
+sh genpdf-openshift-ref.sh && evince openshift-ref.m.pdf
+
+-->
 <reference version="ghub-docbook-1.0"
 	   xmlns="http://docbook.org/ns/docbook"
 	   mpro:s="http://www.omg.org/spec/S/20070801/S%202.0%20UML%202%20Profile.xmi"
@@ -227,15 +234,19 @@ TO DO:
       <itemizedlist>
 	<listitem>
 	  <para><productname
-	  xlink:href="https://www.openshift.com/products/online">OpenShift
-	  Online</productname>, for individual accounts on the &ps.openshift;
+		    ><link
+			 xlink:href="https://www.openshift.com/products/online"
+			 >OpenShift Online</link></productname>,
+	  for individual accounts on the &ps.openshift;
 	  <glossterm>cloud</glossterm></para>
 	</listitem>
 
 	<listitem>
 	  <para><productname
-	  xlink:href="https://www.openshift.com/products/online">OpenShift
-	  Enterprise PaaS</productname>, for <orgname>Red Hat</orgname>
+		    ><link
+			 xlink:href="https://www.openshift.com/products/online"
+			 >OpenShift Enterprise PaaS</link></productname>,
+	  for <orgname>Red Hat</orgname>
 	  professional support in integration of &ps.openshift; with existing
 	  <acronym>IT</acronym> enterprise systems.<citation>
 	      <xref linkend="b.openShiftAccount.bwire2013"/>
@@ -243,9 +254,10 @@ TO DO:
 	</listitem>
 
 	<listitem>
-	  <para><productname
-	  xlink:href="https://www.openshift.com/products/origin">OpenShift
-	  Origin</productname>, for private hosting of the &ps.openshift;
+	  <para><productname><link
+				 xlink:href="https://www.openshift.com/products/origin"
+				 >OpenShift Origin</link></productname>,
+	  for private hosting of the &ps.openshift;
 	  platform</para>
 	</listitem>
       </itemizedlist>
@@ -420,8 +432,9 @@ TO DO:
 
       <para>Once &ps.ruby; is installed, it may be recommended to use a
       package management system unique to &ps.ruby;, such as <productname
-      xlink:href="https://rvm.io/rvm">RVM</productname> or <productname
-      xlink:href="https://github.com/sstephenson/rbenv">rbenv</productname>.</para>
+      ><link xlink:href="https://rvm.io/rvm">RVM</link></productname>
+      or <productname><link
+      xlink:href="https://github.com/sstephenson/rbenv">rbenv</link></productname>.</para>
 
       <refsect2>
 	<title>Installing &ps.ruby; on &ps.linux; Platforms</title>
@@ -485,14 +498,16 @@ TO DO:
 
 	<para>If &ps.ruby; is not available on the &ps.osx;
 	<glossterm>machine</glossterm>, it may be installed via <productname
-	xlink:href="https://developer.apple.com/xcode/">Xcode</productname>.</para>
+	><link xlink:href="https://developer.apple.com/xcode/"
+	>Xcode</link></productname>.</para>
       </refsect2>
 
       <refsect2>
 	<title>Installing &ps.ruby; on &ps.mswin; Platforms</title>
 
 	<para>Refer to <productname
-	xlink:href="http://rubyinstaller.org/">RubyInstaller</productname> for
+	><link xlink:href="http://rubyinstaller.org/"
+	>RubyInstaller</link></productname> for
 	<productname>Windows</productname><citation>
 	    <xref linkend="b.installRuby.dlRuby"/>
 	  </citation>. (Note that <productname>RubyGems</productname> is
@@ -601,15 +616,16 @@ TO DO:
 	<title>Installing &ps.git; on &ps.osx; Platforms</title>
 
 	<para>&cf; <productname
-	xlink:href="https://code.google.com/p/git-osx-installer/">Git for OS
-	X</productname></para>
+	><link xlink:href="https://code.google.com/p/git-osx-installer/"
+	>Git for &ps.osx;</link></productname></para>
       </refsect2>
 
       <refsect2>
 	<title>Installing &ps.git; on &ps.mswin; Platforms</title>
 
 	<para>&cf; <productname
-	xlink:href="https://code.google.com/p/tortoisegit/">TortoiseGit</productname></para>
+	><link xlink:href="https://code.google.com/p/tortoisegit/"
+	>TortoiseGit</link></productname></para>
       </refsect2>
     </refsect1>
 
@@ -694,7 +710,7 @@ TO DO:
       <example>
 	<title>Downloading &ps.osOrigin; Image Via <command>wget</command></title>
 	<programlisting>wget --continue --progress=dot \
-  https://mirror.openshift.com/pub/origin-server/release/2/images/openshift-origin.zip</programlisting>
+  <link xlink:href="https://mirror.openshift.com/pub/origin-server/release/2/images/openshift-origin.zip">https://mirror.openshift.com/pub/origin-server/release/2/images/openshift-origin.zip</link></programlisting>
       </example>
 
 	<segmentedlist>
@@ -923,8 +939,9 @@ TO DO:
 	role="hostname">www.virtualbox.org</systemitem><footnote>
 	<para>
 	  &cf; <citetitle
+	  ><link
 	  xlink:href="https://www.virtualbox.org/wiki/Downloads"
-	  >Downloads &mdash; Oracle VM VirtualBox</citetitle>
+	  >Downloads &mdash; Oracle VM VirtualBox</link></citetitle>
 	</para>
       </footnote></para>
 
