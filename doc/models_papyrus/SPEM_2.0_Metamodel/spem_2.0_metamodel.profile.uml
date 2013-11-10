@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Arbor_SPEM_Definitions="http:///schemas/Arbor_SPEM_Definitions/_YuqygEoPEeOWw-naTzop-w/2" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:l2="http://www.eclipse.org/uml2/4.0.0/UML/Profile/L2" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/Arbor_SPEM_Definitions/_YuqygEoPEeOWw-naTzop-w/2 Arbor_SPEM_Definitions.profile.uml#_YurZkEoPEeOWw-naTzop-w">
+  <uml:Profile xmi:id="_ZEcVkEoMEeOWw-naTzop-w" name="SPEM2-Complete" metaclassReference="_f7lzkEoMEeOWw-naTzop-w _VIt4IEoSEeOWw-naTzop-w" metamodelReference="_ZEcVkUoMEeOWw-naTzop-w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jp4DMUoMEeOWw-naTzop-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_G6KrkEoOEeOWw-naTzop-w" name="SPEM_2Complete" nsURI="http:///schemas/SPEM_2Complete/_G6JdcEoOEeOWw-naTzop-w/2" nsPrefix="SPEM_2Complete">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_G6kUMEoOEeOWw-naTzop-w" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G6kUMUoOEeOWw-naTzop-w" key="Version" value="0.0.3"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G6kUMkoOEeOWw-naTzop-w" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G6kUM0oOEeOWw-naTzop-w" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G6kUNEoOEeOWw-naTzop-w" key="Date" value="2013-11-10"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G6kUNUoOEeOWw-naTzop-w" key="Author" value=""/>
+        </eAnnotations>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_G6KrkUoOEeOWw-naTzop-w" name="PlanningData">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_G6KrkkoOEeOWw-naTzop-w" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bA1w0EoMEeOWw-naTzop-w"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_G6Krk0oOEeOWw-naTzop-w" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_G6KrlUoOEeOWw-naTzop-w" name="SPEMClass">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_G6KrlkoOEeOWw-naTzop-w" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_G6Krl0oOEeOWw-naTzop-w" name="profileClass" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_G6KrmUoOEeOWw-naTzop-w" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+      <contents xmi:type="ecore:EPackage" xmi:id="_vhiNsUoMEeOWw-naTzop-w" name="SPEM_2Complete" nsURI="http:///schemas/SPEM_2Complete/_vhiNsEoMEeOWw-naTzop-w/1" nsPrefix="SPEM_2Complete">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vhslwEoMEeOWw-naTzop-w" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vhslwUoMEeOWw-naTzop-w" key="Version" value="0.0.2"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vhslwkoMEeOWw-naTzop-w" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vhslw0oMEeOWw-naTzop-w" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vhslxEoMEeOWw-naTzop-w" key="Date" value="2013-11-10"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vhslxUoMEeOWw-naTzop-w" key="Author" value=""/>
+        </eAnnotations>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_vhiNskoMEeOWw-naTzop-w" name="PlanningData">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vhiNs0oMEeOWw-naTzop-w" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bA1w0EoMEeOWw-naTzop-w"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vhiNtEoMEeOWw-naTzop-w" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+      <contents xmi:type="ecore:EPackage" xmi:id="_jqCbQEoMEeOWw-naTzop-w" name="Profile" nsURI="http:///schemas/Profile/_jp4DMEoMEeOWw-naTzop-w/0" nsPrefix="Profile">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jqLlMEoMEeOWw-naTzop-w" source="PapyrusVersion">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jqLlMUoMEeOWw-naTzop-w" key="Version" value="0.0.1"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jqLlMkoMEeOWw-naTzop-w" key="Comment" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jqLlM0oMEeOWw-naTzop-w" key="Copyright" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jqLlNEoMEeOWw-naTzop-w" key="Date" value="2013-11-10"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jqLlNUoMEeOWw-naTzop-w" key="Author" value=""/>
+        </eAnnotations>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_jqCbQUoMEeOWw-naTzop-w" name="PlanningData">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jqCbQkoMEeOWw-naTzop-w" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_bA1w0EoMEeOWw-naTzop-w"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_jqCbQ0oMEeOWw-naTzop-w" name="base_Class" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_1_C8UEoPEeOWw-naTzop-w" annotatedElement="_bA1w0EoMEeOWw-naTzop-w">
+      <body>profileClass = PlannedElement
+</body>
+    </ownedComment>
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_f7lzkEoMEeOWw-naTzop-w" alias="Class">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </elementImport>
+    <elementImport xmi:type="uml:ElementImport" xmi:id="_VIt4IEoSEeOWw-naTzop-w" alias="PackageableElement">
+      <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#PackageableElement"/>
+    </elementImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ZEcVkUoMEeOWw-naTzop-w">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_ZEcVkkoMEeOWw-naTzop-w">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_bA1w0EoMEeOWw-naTzop-w" name="PlanningData">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ojqqYEoREeOWw-naTzop-w" general="_bpMYAEoREeOWw-naTzop-w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_haTNQEoMEeOWw-naTzop-w" name="base_Class" association="_haWQkEoMEeOWw-naTzop-w">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ooTksEoPEeOWw-naTzop-w" name="startDate" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pPjx8EoPEeOWw-naTzop-w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pPoqcEoPEeOWw-naTzop-w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_pP5JIEoPEeOWw-naTzop-w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NecmAEoQEeOWw-naTzop-w" name="finishDate" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ns9jIEoQEeOWw-naTzop-w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NtEQ0EoQEeOWw-naTzop-w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_NtV9oEoQEeOWw-naTzop-w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YUcfMEoQEeOWw-naTzop-w" name="rank" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bjVdEEoQEeOWw-naTzop-w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bjcKwEoQEeOWw-naTzop-w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_bjtQgEoQEeOWw-naTzop-w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wrFS4EoQEeOWw-naTzop-w" name="duration" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xQ2SYEoQEeOWw-naTzop-w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xQ-1QEoQEeOWw-naTzop-w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_xRP7AEoQEeOWw-naTzop-w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_haWQkEoMEeOWw-naTzop-w" name="E_PlanningData_Class1" memberEnd="_haWQkUoMEeOWw-naTzop-w _haTNQEoMEeOWw-naTzop-w">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_haWQkUoMEeOWw-naTzop-w" name="extension_PlanningData" type="_bA1w0EoMEeOWw-naTzop-w" aggregation="composite" association="_haWQkEoMEeOWw-naTzop-w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_bpMYAEoREeOWw-naTzop-w" name="ProcessElement" isAbstract="true">
+      <generalization xmi:type="uml:Generalization" xmi:id="_zgdvIEoREeOWw-naTzop-w" general="_v2pv0EoREeOWw-naTzop-w"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_0AghIEoREeOWw-naTzop-w" general="_wfaY8EoREeOWw-naTzop-w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_d8DLcEoREeOWw-naTzop-w" name="base_Class" association="_d8G10EoREeOWw-naTzop-w">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_d8G10EoREeOWw-naTzop-w" name="E_ProcessElement_Class1" memberEnd="_d8G10UoREeOWw-naTzop-w _d8DLcEoREeOWw-naTzop-w">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_d8G10UoREeOWw-naTzop-w" name="extension_ProcessElement" type="_bpMYAEoREeOWw-naTzop-w" aggregation="composite" association="_d8G10EoREeOWw-naTzop-w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_v2pv0EoREeOWw-naTzop-w" name="ProcessPackageableElement" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-tck8EoREeOWw-naTzop-w" name="base_Class" association="_-tj5sEoREeOWw-naTzop-w">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_wfaY8EoREeOWw-naTzop-w" name="DescribableElement" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9tzs4EoREeOWw-naTzop-w" name="base_Class" association="_9t7BoEoREeOWw-naTzop-w">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_9t7BoEoREeOWw-naTzop-w" name="E_DescribableElement_Class1" memberEnd="_9t7BoUoREeOWw-naTzop-w _9tzs4EoREeOWw-naTzop-w">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_9t7BoUoREeOWw-naTzop-w" name="extension_DescribableElement" type="_wfaY8EoREeOWw-naTzop-w" aggregation="composite" association="_9t7BoEoREeOWw-naTzop-w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_-tj5sEoREeOWw-naTzop-w" name="E_ProcessPackageableElement_Class1" memberEnd="_-tj5sUoREeOWw-naTzop-w _-tck8EoREeOWw-naTzop-w">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_-tj5sUoREeOWw-naTzop-w" name="extension_ProcessPackageableElement" type="_v2pv0EoREeOWw-naTzop-w" aggregation="composite" association="_-tj5sEoREeOWw-naTzop-w"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DETX0EoPEeOWw-naTzop-w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DExR4EoPEeOWw-naTzop-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Arbor_SPEM_Definitions.profile.uml#_YurZkEoPEeOWw-naTzop-w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="Arbor_SPEM_Definitions.profile.uml#_THMCEEoOEeOWw-naTzop-w"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_bvc7kEoSEeOWw-naTzop-w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bv2kMEoSEeOWw-naTzop-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/4.0.0/UML/Profile/L2#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/StandardL2.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Profile>
+  <Arbor_SPEM_Definitions:MetamodelClass xmi:id="_EXh6QEoPEeOWw-naTzop-w" profileClass="PlannedElement" base_Class="_bA1w0EoMEeOWw-naTzop-w"/>
+  <l2:Metaclass xmi:id="_dV5U8EoSEeOWw-naTzop-w" base_Class="_v2pv0EoREeOWw-naTzop-w"/>
+</xmi:XMI>

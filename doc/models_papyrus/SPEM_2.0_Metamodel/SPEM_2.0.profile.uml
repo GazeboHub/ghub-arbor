@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_pVBoIEoMEeOWw-naTzop-w" name="SPEM 2.0 UML 2 Profile" metamodelReference="_pVBoIUoMEeOWw-naTzop-w">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_pVBoIUoMEeOWw-naTzop-w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_pVBoIkoMEeOWw-naTzop-w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+</uml:Profile>
